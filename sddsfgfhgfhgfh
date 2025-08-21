@@ -1,0 +1,4280 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Executor = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Plugins = Instance.new("Folder")
+local AC6_Controls_Module = Instance.new("Frame")
+local Window = Instance.new("Frame")
+local Overlay = Instance.new("TextLabel")
+local Error = Instance.new("TextLabel")
+local INSPARE = Instance.new("TextLabel")
+local Header = Instance.new("TextLabel")
+local Tabs = Instance.new("Frame")
+local Controller = Instance.new("TextButton")
+local Mouse = Instance.new("TextButton")
+local Keyboard = Instance.new("TextButton")
+local Line = Instance.new("Frame")
+local Content = Instance.new("Frame")
+local ControlRDZone = Instance.new("TextLabel")
+local S = Instance.new("ScrollingFrame")
+local ControlLDZone = Instance.new("TextLabel")
+local S_2 = Instance.new("ScrollingFrame")
+local MSteerWidth = Instance.new("TextLabel")
+local S_3 = Instance.new("ScrollingFrame")
+local MSteerDZone = Instance.new("TextLabel")
+local S_4 = Instance.new("ScrollingFrame")
+local T = Instance.new("TextLabel")
+local T_2 = Instance.new("TextLabel")
+local T_3 = Instance.new("TextLabel")
+local T_4 = Instance.new("TextLabel")
+local ContlrToggleTCS = Instance.new("TextButton")
+local ContlrToggleTMode = Instance.new("TextButton")
+local ContlrPBrake = Instance.new("TextButton")
+local ContlrClutch = Instance.new("TextButton")
+local ContlrShiftDown = Instance.new("TextButton")
+local ContlrShiftUp = Instance.new("TextButton")
+local ContlrSteer = Instance.new("TextButton")
+local ContlrBrake = Instance.new("TextButton")
+local ContlrThrottle = Instance.new("TextButton")
+local T_5 = Instance.new("TextLabel")
+local T_6 = Instance.new("TextLabel")
+local T_7 = Instance.new("TextLabel")
+local T_8 = Instance.new("TextLabel")
+local T_9 = Instance.new("TextLabel")
+local T_10 = Instance.new("TextLabel")
+local T_11 = Instance.new("TextLabel")
+local T_12 = Instance.new("TextLabel")
+local T_13 = Instance.new("TextLabel")
+local MousePBrake = Instance.new("TextButton")
+local MouseClutch = Instance.new("TextButton")
+local MouseShiftDown = Instance.new("TextButton")
+local MouseShiftUp = Instance.new("TextButton")
+local MouseSteer = Instance.new("TextButton")
+local MouseBrake = Instance.new("TextButton")
+local MouseThrottle = Instance.new("TextButton")
+local T_14 = Instance.new("TextLabel")
+local T_15 = Instance.new("TextLabel")
+local T_16 = Instance.new("TextLabel")
+local T_17 = Instance.new("TextLabel")
+local T_18 = Instance.new("TextLabel")
+local T_19 = Instance.new("TextLabel")
+local T_20 = Instance.new("TextLabel")
+local ToggleABS = Instance.new("TextButton")
+local ToggleTCS = Instance.new("TextButton")
+local ToggleTransMode = Instance.new("TextButton")
+local PBrake = Instance.new("TextButton")
+local Clutch = Instance.new("TextButton")
+local ShiftDown = Instance.new("TextButton")
+local ShiftUp = Instance.new("TextButton")
+local SteerRight2 = Instance.new("TextButton")
+local SteerLeft2 = Instance.new("TextButton")
+local Brake2 = Instance.new("TextButton")
+local Throttle2 = Instance.new("TextButton")
+local SteerRight = Instance.new("TextButton")
+local SteerLeft = Instance.new("TextButton")
+local Brake = Instance.new("TextButton")
+local Throttle = Instance.new("TextButton")
+local T_21 = Instance.new("TextLabel")
+local T_22 = Instance.new("TextLabel")
+local T_23 = Instance.new("TextLabel")
+local T_24 = Instance.new("TextLabel")
+local T_25 = Instance.new("TextLabel")
+local T_26 = Instance.new("TextLabel")
+local T_27 = Instance.new("TextLabel")
+local T_28 = Instance.new("TextLabel")
+local T_29 = Instance.new("TextLabel")
+local T_30 = Instance.new("TextLabel")
+local T_31 = Instance.new("TextLabel")
+local T_32 = Instance.new("TextLabel")
+local T_33 = Instance.new("TextLabel")
+local T_34 = Instance.new("TextLabel")
+local T_35 = Instance.new("TextLabel")
+local ToggleMouseDrive = Instance.new("TextButton")
+local T_36 = Instance.new("TextLabel")
+local T_37 = Instance.new("TextLabel")
+local ContlrToggleABS = Instance.new("TextButton")
+local Toggle = Instance.new("TextButton")
+local SS6DynamicFriction = Instance.new("ImageLabel")
+local UISizeConstraint = Instance.new("UISizeConstraint")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Tires = Instance.new("Frame")
+local RL = Instance.new("Frame")
+local First = Instance.new("Frame")
+local Second = Instance.new("Frame")
+local Image = Instance.new("ImageLabel")
+local RR = Instance.new("Frame")
+local First_2 = Instance.new("Frame")
+local Second_2 = Instance.new("Frame")
+local Image_2 = Instance.new("ImageLabel")
+local FL = Instance.new("Frame")
+local First_3 = Instance.new("Frame")
+local Second_3 = Instance.new("Frame")
+local Image_3 = Instance.new("ImageLabel")
+local FR = Instance.new("Frame")
+local First_4 = Instance.new("Frame")
+local Second_4 = Instance.new("Frame")
+local Image_4 = Instance.new("ImageLabel")
+local Background = Instance.new("Frame")
+local L = Instance.new("ImageLabel")
+local WearData = Instance.new("Folder")
+local AC6_Stock_Gauges = Instance.new("Frame")
+local Tach = Instance.new("Frame")
+local Needle = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Speedo = Instance.new("Frame")
+local Needle_2 = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local ln = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
+local Num = Instance.new("TextLabel")
+local Gear = Instance.new("TextLabel")
+local ABS = Instance.new("TextLabel")
+local PBrake_2 = Instance.new("TextLabel")
+local TCS = Instance.new("TextLabel")
+local TMode = Instance.new("TextLabel")
+local Speed = Instance.new("TextButton")
+local ABS_2 = Instance.new("TextLabel")
+local AChassisInterface = Instance.new("ScreenGui")
+local Values = Instance.new("Folder")
+local R6 = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Exe = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Cle = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Frame1 = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+
+--Properties:
+
+Executor.Name = "Executor"
+Executor.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Executor.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = Executor
+main.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+main.BorderColor3 = Color3.fromRGB(5, 249, 233)
+main.BorderSizePixel = 3
+main.Position = UDim2.new(0.285176575, -100, 0.21878241, -11)
+main.Size = UDim2.new(0, 787, 0, 468)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0, 0, 0.025641026, 0)
+TextLabel.Size = UDim2.new(0, 296, 0, 44)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "felamion"
+TextLabel.TextColor3 = Color3.fromRGB(61, 182, 182)
+TextLabel.TextSize = 60.000
+
+Plugins.Name = "Plugins"
+Plugins.Parent = game.StarterGui.Executor.main.LoadString
+
+AC6_Controls_Module.Name = "AC6_Controls_Module"
+AC6_Controls_Module.Parent = Plugins
+AC6_Controls_Module.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AC6_Controls_Module.BackgroundTransparency = 1.000
+AC6_Controls_Module.BorderColor3 = Color3.fromRGB(27, 42, 53)
+AC6_Controls_Module.BorderSizePixel = 0
+AC6_Controls_Module.Size = UDim2.new(1, 0, 1, 0)
+AC6_Controls_Module.ZIndex = 3
+
+Window.Name = "Window"
+Window.Parent = AC6_Controls_Module
+Window.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Window.BackgroundTransparency = 0.500
+Window.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Window.BorderSizePixel = 0
+Window.ClipsDescendants = true
+Window.Position = UDim2.new(0.5, -250, 0, -500)
+Window.Size = UDim2.new(0, 500, 0, 400)
+Window.ZIndex = 3
+
+Overlay.Name = "Overlay"
+Overlay.Parent = Window
+Overlay.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Overlay.BackgroundTransparency = 0.500
+Overlay.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Overlay.BorderSizePixel = 0
+Overlay.Size = UDim2.new(1, 0, 1, 0)
+Overlay.Visible = false
+Overlay.ZIndex = 4
+Overlay.Font = Enum.Font.SourceSansItalic
+Overlay.Text = "[Press a key to assign or Enter to cancel]"
+Overlay.TextColor3 = Color3.fromRGB(255, 255, 255)
+Overlay.TextSize = 28.000
+Overlay.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
+Overlay.TextStrokeTransparency = 0.000
+
+Error.Name = "Error"
+Error.Parent = Window
+Error.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Error.BackgroundTransparency = 1.000
+Error.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Error.BorderSizePixel = 0
+Error.Position = UDim2.new(0.5, 0, 0, 20)
+Error.Visible = false
+Error.ZIndex = 3
+Error.Font = Enum.Font.SourceSansItalic
+Error.Text = "Invalid Input"
+Error.TextColor3 = Color3.fromRGB(255, 0, 0)
+Error.TextSize = 18.000
+Error.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+Error.TextStrokeTransparency = 0.950
+
+INSPARE.Name = "//INSPARE"
+INSPARE.Parent = Window
+INSPARE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+INSPARE.BackgroundTransparency = 1.000
+INSPARE.BorderColor3 = Color3.fromRGB(27, 42, 53)
+INSPARE.BorderSizePixel = 0
+INSPARE.Position = UDim2.new(1, -20, 0, 20)
+INSPARE.ZIndex = 3
+INSPARE.Font = Enum.Font.SourceSansLight
+INSPARE.Text = "A-Chassis 6 by //INSPARE"
+INSPARE.TextColor3 = Color3.fromRGB(255, 255, 255)
+INSPARE.TextSize = 14.000
+INSPARE.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+INSPARE.TextStrokeTransparency = 0.950
+INSPARE.TextXAlignment = Enum.TextXAlignment.Right
+
+Header.Name = "Header"
+Header.Parent = Window
+Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header.BackgroundTransparency = 1.000
+Header.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Header.BorderSizePixel = 0
+Header.Position = UDim2.new(0, 10, 0, 20)
+Header.ZIndex = 3
+Header.Font = Enum.Font.SourceSansLight
+Header.Text = "Controls"
+Header.TextColor3 = Color3.fromRGB(255, 255, 255)
+Header.TextSize = 32.000
+Header.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+Header.TextStrokeTransparency = 0.950
+Header.TextXAlignment = Enum.TextXAlignment.Left
+
+Tabs.Name = "Tabs"
+Tabs.Parent = Window
+Tabs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tabs.BackgroundTransparency = 1.000
+Tabs.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Tabs.BorderSizePixel = 0
+Tabs.ClipsDescendants = true
+Tabs.Position = UDim2.new(0, 5, 0, 40)
+Tabs.Size = UDim2.new(0, 490, 0, 20)
+Tabs.ZIndex = 3
+
+Controller.Name = "Controller"
+Controller.Parent = Tabs
+Controller.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Controller.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Controller.BorderSizePixel = 0
+Controller.Position = UDim2.new(0, 235, 0, -5)
+Controller.Size = UDim2.new(0, 100, 0, 20)
+Controller.ZIndex = 3
+Controller.Font = Enum.Font.SourceSans
+Controller.Text = "Controller"
+Controller.TextColor3 = Color3.fromRGB(100, 100, 100)
+Controller.TextSize = 14.000
+Controller.TextStrokeTransparency = 0.950
+Controller.TextYAlignment = Enum.TextYAlignment.Bottom
+
+Mouse.Name = "Mouse"
+Mouse.Parent = Tabs
+Mouse.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mouse.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Mouse.BorderSizePixel = 0
+Mouse.Position = UDim2.new(0, 120, 0, -5)
+Mouse.Size = UDim2.new(0, 100, 0, 20)
+Mouse.ZIndex = 3
+Mouse.Font = Enum.Font.SourceSans
+Mouse.Text = "Mouse"
+Mouse.TextColor3 = Color3.fromRGB(100, 100, 100)
+Mouse.TextSize = 14.000
+Mouse.TextStrokeTransparency = 0.950
+Mouse.TextYAlignment = Enum.TextYAlignment.Bottom
+
+Keyboard.Name = "Keyboard"
+Keyboard.Parent = Tabs
+Keyboard.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keyboard.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Keyboard.BorderSizePixel = 0
+Keyboard.Position = UDim2.new(0, 5, 0, 0)
+Keyboard.Size = UDim2.new(0, 100, 0, 20)
+Keyboard.ZIndex = 3
+Keyboard.Font = Enum.Font.SourceSans
+Keyboard.Text = "Keyboard"
+Keyboard.TextColor3 = Color3.fromRGB(100, 100, 100)
+Keyboard.TextSize = 14.000
+Keyboard.TextStrokeTransparency = 0.950
+Keyboard.TextYAlignment = Enum.TextYAlignment.Bottom
+
+Line.Name = "Line"
+Line.Parent = Tabs
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Line.BorderSizePixel = 0
+Line.Size = UDim2.new(1, 0, 0, 2)
+Line.ZIndex = 3
+
+Content.Name = "Content"
+Content.Parent = Window
+Content.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Content.BackgroundTransparency = 1.000
+Content.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Content.BorderSizePixel = 0
+Content.Position = UDim2.new(0, 0, 0, 60)
+Content.Size = UDim2.new(1, 0, 1, -60)
+Content.ZIndex = 3
+
+ControlRDZone.Name = "ControlRDZone"
+ControlRDZone.Parent = Content
+ControlRDZone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ControlRDZone.BackgroundTransparency = 1.000
+ControlRDZone.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ControlRDZone.BorderSizePixel = 0
+ControlRDZone.Position = UDim2.new(2, 200, 0, 240)
+ControlRDZone.ZIndex = 3
+ControlRDZone.Font = Enum.Font.SourceSansItalic
+ControlRDZone.Text = "100%"
+ControlRDZone.TextColor3 = Color3.fromRGB(255, 255, 255)
+ControlRDZone.TextSize = 18.000
+ControlRDZone.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+ControlRDZone.TextStrokeTransparency = 0.950
+ControlRDZone.TextXAlignment = Enum.TextXAlignment.Right
+
+S.Name = "S"
+S.Parent = ControlRDZone
+S.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+S.BackgroundTransparency = 0.500
+S.BorderColor3 = Color3.fromRGB(27, 42, 53)
+S.BorderSizePixel = 0
+S.Position = UDim2.new(0, 10, 0, 2)
+S.Size = UDim2.new(0, 260, 0, 3)
+S.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+S.CanvasSize = UDim2.new(0, 5200, 0, 0)
+S.ScrollBarThickness = 8
+S.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+ControlLDZone.Name = "ControlLDZone"
+ControlLDZone.Parent = Content
+ControlLDZone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ControlLDZone.BackgroundTransparency = 1.000
+ControlLDZone.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ControlLDZone.BorderSizePixel = 0
+ControlLDZone.Position = UDim2.new(2, 200, 0, 220)
+ControlLDZone.ZIndex = 3
+ControlLDZone.Font = Enum.Font.SourceSansItalic
+ControlLDZone.Text = "100%"
+ControlLDZone.TextColor3 = Color3.fromRGB(255, 255, 255)
+ControlLDZone.TextSize = 18.000
+ControlLDZone.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+ControlLDZone.TextStrokeTransparency = 0.950
+ControlLDZone.TextXAlignment = Enum.TextXAlignment.Right
+
+S_2.Name = "S"
+S_2.Parent = ControlLDZone
+S_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+S_2.BackgroundTransparency = 0.500
+S_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+S_2.BorderSizePixel = 0
+S_2.Position = UDim2.new(0, 10, 0, 2)
+S_2.Size = UDim2.new(0, 260, 0, 3)
+S_2.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+S_2.CanvasSize = UDim2.new(0, 5200, 0, 0)
+S_2.ScrollBarThickness = 8
+S_2.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+MSteerWidth.Name = "MSteerWidth"
+MSteerWidth.Parent = Content
+MSteerWidth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MSteerWidth.BackgroundTransparency = 1.000
+MSteerWidth.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MSteerWidth.BorderSizePixel = 0
+MSteerWidth.Position = UDim2.new(1, 200, 0, 180)
+MSteerWidth.ZIndex = 3
+MSteerWidth.Font = Enum.Font.SourceSansItalic
+MSteerWidth.Text = "100%"
+MSteerWidth.TextColor3 = Color3.fromRGB(255, 255, 255)
+MSteerWidth.TextSize = 18.000
+MSteerWidth.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+MSteerWidth.TextStrokeTransparency = 0.950
+MSteerWidth.TextXAlignment = Enum.TextXAlignment.Right
+
+S_3.Name = "S"
+S_3.Parent = MSteerWidth
+S_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+S_3.BackgroundTransparency = 0.500
+S_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+S_3.BorderSizePixel = 0
+S_3.Position = UDim2.new(0, 10, 0, 2)
+S_3.Size = UDim2.new(0, 260, 0, 3)
+S_3.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+S_3.CanvasSize = UDim2.new(0, 5200, 0, 0)
+S_3.ScrollBarThickness = 8
+S_3.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+MSteerDZone.Name = "MSteerDZone"
+MSteerDZone.Parent = Content
+MSteerDZone.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MSteerDZone.BackgroundTransparency = 1.000
+MSteerDZone.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MSteerDZone.BorderSizePixel = 0
+MSteerDZone.Position = UDim2.new(1, 200, 0, 160)
+MSteerDZone.ZIndex = 3
+MSteerDZone.Font = Enum.Font.SourceSansItalic
+MSteerDZone.Text = "100%"
+MSteerDZone.TextColor3 = Color3.fromRGB(255, 255, 255)
+MSteerDZone.TextSize = 18.000
+MSteerDZone.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+MSteerDZone.TextStrokeTransparency = 0.950
+MSteerDZone.TextXAlignment = Enum.TextXAlignment.Right
+
+S_4.Name = "S"
+S_4.Parent = MSteerDZone
+S_4.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+S_4.BackgroundTransparency = 0.500
+S_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+S_4.BorderSizePixel = 0
+S_4.Position = UDim2.new(0, 10, 0, 2)
+S_4.Size = UDim2.new(0, 260, 0, 3)
+S_4.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+S_4.CanvasSize = UDim2.new(0, 5200, 0, 0)
+S_4.ScrollBarThickness = 8
+S_4.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+T.Name = "T"
+T.Parent = Content
+T.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T.BackgroundTransparency = 1.000
+T.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T.BorderSizePixel = 0
+T.Position = UDim2.new(2, 150, 0, 240)
+T.ZIndex = 3
+T.Font = Enum.Font.SourceSansItalic
+T.Text = "Right Deadzone"
+T.TextColor3 = Color3.fromRGB(255, 255, 255)
+T.TextSize = 18.000
+T.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T.TextStrokeTransparency = 0.950
+T.TextXAlignment = Enum.TextXAlignment.Right
+
+T_2.Name = "T"
+T_2.Parent = Content
+T_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_2.BackgroundTransparency = 1.000
+T_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_2.BorderSizePixel = 0
+T_2.Position = UDim2.new(2, 150, 0, 220)
+T_2.ZIndex = 3
+T_2.Font = Enum.Font.SourceSansItalic
+T_2.Text = "Left Deadzone"
+T_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_2.TextSize = 18.000
+T_2.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_2.TextStrokeTransparency = 0.950
+T_2.TextXAlignment = Enum.TextXAlignment.Right
+
+T_3.Name = "T"
+T_3.Parent = Content
+T_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_3.BackgroundTransparency = 1.000
+T_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_3.BorderSizePixel = 0
+T_3.Position = UDim2.new(1, 150, 0, 180)
+T_3.ZIndex = 3
+T_3.Font = Enum.Font.SourceSansItalic
+T_3.Text = "Control Width"
+T_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_3.TextSize = 18.000
+T_3.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_3.TextStrokeTransparency = 0.950
+T_3.TextXAlignment = Enum.TextXAlignment.Right
+
+T_4.Name = "T"
+T_4.Parent = Content
+T_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_4.BackgroundTransparency = 1.000
+T_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_4.BorderSizePixel = 0
+T_4.Position = UDim2.new(1, 150, 0, 160)
+T_4.ZIndex = 3
+T_4.Font = Enum.Font.SourceSansItalic
+T_4.Text = "Deadzone"
+T_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_4.TextSize = 18.000
+T_4.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_4.TextStrokeTransparency = 0.950
+T_4.TextXAlignment = Enum.TextXAlignment.Right
+
+ContlrToggleTCS.Name = "ContlrToggleTCS"
+ContlrToggleTCS.Parent = Content
+ContlrToggleTCS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrToggleTCS.BackgroundTransparency = 0.500
+ContlrToggleTCS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrToggleTCS.BorderSizePixel = 0
+ContlrToggleTCS.Position = UDim2.new(2, 170, 0, 173)
+ContlrToggleTCS.Size = UDim2.new(0, 300, 0, 15)
+ContlrToggleTCS.ZIndex = 3
+ContlrToggleTCS.Font = Enum.Font.SourceSans
+ContlrToggleTCS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrToggleTCS.TextSize = 14.000
+
+ContlrToggleTMode.Name = "ContlrToggleTMode"
+ContlrToggleTMode.Parent = Content
+ContlrToggleTMode.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrToggleTMode.BackgroundTransparency = 0.500
+ContlrToggleTMode.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrToggleTMode.BorderSizePixel = 0
+ContlrToggleTMode.Position = UDim2.new(2, 170, 0, 153)
+ContlrToggleTMode.Size = UDim2.new(0, 300, 0, 15)
+ContlrToggleTMode.ZIndex = 3
+ContlrToggleTMode.Font = Enum.Font.SourceSans
+ContlrToggleTMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrToggleTMode.TextSize = 14.000
+
+ContlrPBrake.Name = "ContlrPBrake"
+ContlrPBrake.Parent = Content
+ContlrPBrake.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrPBrake.BackgroundTransparency = 0.500
+ContlrPBrake.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrPBrake.BorderSizePixel = 0
+ContlrPBrake.Position = UDim2.new(2, 170, 0, 133)
+ContlrPBrake.Size = UDim2.new(0, 300, 0, 15)
+ContlrPBrake.ZIndex = 3
+ContlrPBrake.Font = Enum.Font.SourceSans
+ContlrPBrake.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrPBrake.TextSize = 14.000
+
+ContlrClutch.Name = "ContlrClutch"
+ContlrClutch.Parent = Content
+ContlrClutch.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrClutch.BackgroundTransparency = 0.500
+ContlrClutch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrClutch.BorderSizePixel = 0
+ContlrClutch.Position = UDim2.new(2, 170, 0, 113)
+ContlrClutch.Size = UDim2.new(0, 300, 0, 15)
+ContlrClutch.ZIndex = 3
+ContlrClutch.Font = Enum.Font.SourceSans
+ContlrClutch.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrClutch.TextSize = 14.000
+
+ContlrShiftDown.Name = "ContlrShiftDown"
+ContlrShiftDown.Parent = Content
+ContlrShiftDown.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrShiftDown.BackgroundTransparency = 0.500
+ContlrShiftDown.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrShiftDown.BorderSizePixel = 0
+ContlrShiftDown.Position = UDim2.new(2, 170, 0, 93)
+ContlrShiftDown.Size = UDim2.new(0, 300, 0, 15)
+ContlrShiftDown.ZIndex = 3
+ContlrShiftDown.Font = Enum.Font.SourceSans
+ContlrShiftDown.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrShiftDown.TextSize = 14.000
+
+ContlrShiftUp.Name = "ContlrShiftUp"
+ContlrShiftUp.Parent = Content
+ContlrShiftUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrShiftUp.BackgroundTransparency = 0.500
+ContlrShiftUp.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrShiftUp.BorderSizePixel = 0
+ContlrShiftUp.Position = UDim2.new(2, 170, 0, 73)
+ContlrShiftUp.Size = UDim2.new(0, 300, 0, 15)
+ContlrShiftUp.ZIndex = 3
+ContlrShiftUp.Font = Enum.Font.SourceSans
+ContlrShiftUp.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrShiftUp.TextSize = 14.000
+
+ContlrSteer.Name = "ContlrSteer"
+ContlrSteer.Parent = Content
+ContlrSteer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrSteer.BackgroundTransparency = 0.500
+ContlrSteer.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrSteer.BorderSizePixel = 0
+ContlrSteer.Position = UDim2.new(2, 170, 0, 53)
+ContlrSteer.Size = UDim2.new(0, 300, 0, 15)
+ContlrSteer.ZIndex = 3
+ContlrSteer.Font = Enum.Font.SourceSans
+ContlrSteer.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrSteer.TextSize = 14.000
+
+ContlrBrake.Name = "ContlrBrake"
+ContlrBrake.Parent = Content
+ContlrBrake.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrBrake.BackgroundTransparency = 0.500
+ContlrBrake.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrBrake.BorderSizePixel = 0
+ContlrBrake.Position = UDim2.new(2, 170, 0, 33)
+ContlrBrake.Size = UDim2.new(0, 300, 0, 15)
+ContlrBrake.ZIndex = 3
+ContlrBrake.Font = Enum.Font.SourceSans
+ContlrBrake.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrBrake.TextSize = 14.000
+
+ContlrThrottle.Name = "ContlrThrottle"
+ContlrThrottle.Parent = Content
+ContlrThrottle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrThrottle.BackgroundTransparency = 0.500
+ContlrThrottle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrThrottle.BorderSizePixel = 0
+ContlrThrottle.Position = UDim2.new(2, 170, 0, 13)
+ContlrThrottle.Size = UDim2.new(0, 300, 0, 15)
+ContlrThrottle.ZIndex = 3
+ContlrThrottle.Font = Enum.Font.SourceSans
+ContlrThrottle.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrThrottle.TextSize = 14.000
+
+T_5.Name = "T"
+T_5.Parent = Content
+T_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_5.BackgroundTransparency = 1.000
+T_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_5.BorderSizePixel = 0
+T_5.Position = UDim2.new(2, 150, 0, 160)
+T_5.ZIndex = 3
+T_5.Font = Enum.Font.SourceSansItalic
+T_5.Text = "Transmission Mode"
+T_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_5.TextSize = 18.000
+T_5.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_5.TextStrokeTransparency = 0.950
+T_5.TextXAlignment = Enum.TextXAlignment.Right
+
+T_6.Name = "T"
+T_6.Parent = Content
+T_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_6.BackgroundTransparency = 1.000
+T_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_6.BorderSizePixel = 0
+T_6.Position = UDim2.new(2, 150, 0, 180)
+T_6.ZIndex = 3
+T_6.Font = Enum.Font.SourceSansItalic
+T_6.Text = "Toggle TCS"
+T_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_6.TextSize = 18.000
+T_6.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_6.TextStrokeTransparency = 0.950
+T_6.TextXAlignment = Enum.TextXAlignment.Right
+
+T_7.Name = "T"
+T_7.Parent = Content
+T_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_7.BackgroundTransparency = 1.000
+T_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_7.BorderSizePixel = 0
+T_7.Position = UDim2.new(2, 150, 0, 140)
+T_7.ZIndex = 3
+T_7.Font = Enum.Font.SourceSansItalic
+T_7.Text = "Handbrake"
+T_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_7.TextSize = 18.000
+T_7.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_7.TextStrokeTransparency = 0.950
+T_7.TextXAlignment = Enum.TextXAlignment.Right
+
+T_8.Name = "T"
+T_8.Parent = Content
+T_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_8.BackgroundTransparency = 1.000
+T_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_8.BorderSizePixel = 0
+T_8.Position = UDim2.new(2, 150, 0, 120)
+T_8.ZIndex = 3
+T_8.Font = Enum.Font.SourceSansItalic
+T_8.Text = "Clutch"
+T_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_8.TextSize = 18.000
+T_8.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_8.TextStrokeTransparency = 0.950
+T_8.TextXAlignment = Enum.TextXAlignment.Right
+
+T_9.Name = "T"
+T_9.Parent = Content
+T_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_9.BackgroundTransparency = 1.000
+T_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_9.BorderSizePixel = 0
+T_9.Position = UDim2.new(2, 150, 0, 100)
+T_9.ZIndex = 3
+T_9.Font = Enum.Font.SourceSansItalic
+T_9.Text = "Shift Down"
+T_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_9.TextSize = 18.000
+T_9.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_9.TextStrokeTransparency = 0.950
+T_9.TextXAlignment = Enum.TextXAlignment.Right
+
+T_10.Name = "T"
+T_10.Parent = Content
+T_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_10.BackgroundTransparency = 1.000
+T_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_10.BorderSizePixel = 0
+T_10.Position = UDim2.new(2, 150, 0, 80)
+T_10.ZIndex = 3
+T_10.Font = Enum.Font.SourceSansItalic
+T_10.Text = "Shift Up"
+T_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_10.TextSize = 18.000
+T_10.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_10.TextStrokeTransparency = 0.950
+T_10.TextXAlignment = Enum.TextXAlignment.Right
+
+T_11.Name = "T"
+T_11.Parent = Content
+T_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_11.BackgroundTransparency = 1.000
+T_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_11.BorderSizePixel = 0
+T_11.Position = UDim2.new(2, 150, 0, 60)
+T_11.ZIndex = 3
+T_11.Font = Enum.Font.SourceSansItalic
+T_11.Text = "Steer"
+T_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_11.TextSize = 18.000
+T_11.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_11.TextStrokeTransparency = 0.950
+T_11.TextXAlignment = Enum.TextXAlignment.Right
+
+T_12.Name = "T"
+T_12.Parent = Content
+T_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_12.BackgroundTransparency = 1.000
+T_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_12.BorderSizePixel = 0
+T_12.Position = UDim2.new(2, 150, 0, 40)
+T_12.ZIndex = 3
+T_12.Font = Enum.Font.SourceSansItalic
+T_12.Text = "Brakes"
+T_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_12.TextSize = 18.000
+T_12.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_12.TextStrokeTransparency = 0.950
+T_12.TextXAlignment = Enum.TextXAlignment.Right
+
+T_13.Name = "T"
+T_13.Parent = Content
+T_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_13.BackgroundTransparency = 1.000
+T_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_13.BorderSizePixel = 0
+T_13.Position = UDim2.new(2, 150, 0, 20)
+T_13.ZIndex = 3
+T_13.Font = Enum.Font.SourceSansItalic
+T_13.Text = "Throttle"
+T_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_13.TextSize = 18.000
+T_13.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_13.TextStrokeTransparency = 0.950
+T_13.TextXAlignment = Enum.TextXAlignment.Right
+
+MousePBrake.Name = "MousePBrake"
+MousePBrake.Parent = Content
+MousePBrake.Active = false
+MousePBrake.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MousePBrake.BackgroundTransparency = 0.500
+MousePBrake.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MousePBrake.BorderSizePixel = 0
+MousePBrake.Position = UDim2.new(1, 170, 0, 133)
+MousePBrake.Selectable = false
+MousePBrake.Size = UDim2.new(0, 300, 0, 15)
+MousePBrake.ZIndex = 3
+MousePBrake.Font = Enum.Font.SourceSans
+MousePBrake.TextColor3 = Color3.fromRGB(255, 255, 255)
+MousePBrake.TextSize = 14.000
+
+MouseClutch.Name = "MouseClutch"
+MouseClutch.Parent = Content
+MouseClutch.Active = false
+MouseClutch.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MouseClutch.BackgroundTransparency = 0.500
+MouseClutch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MouseClutch.BorderSizePixel = 0
+MouseClutch.Position = UDim2.new(1, 170, 0, 113)
+MouseClutch.Selectable = false
+MouseClutch.Size = UDim2.new(0, 300, 0, 15)
+MouseClutch.ZIndex = 3
+MouseClutch.Font = Enum.Font.SourceSans
+MouseClutch.TextColor3 = Color3.fromRGB(255, 255, 255)
+MouseClutch.TextSize = 14.000
+
+MouseShiftDown.Name = "MouseShiftDown"
+MouseShiftDown.Parent = Content
+MouseShiftDown.Active = false
+MouseShiftDown.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MouseShiftDown.BackgroundTransparency = 0.500
+MouseShiftDown.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MouseShiftDown.BorderSizePixel = 0
+MouseShiftDown.Position = UDim2.new(1, 170, 0, 93)
+MouseShiftDown.Selectable = false
+MouseShiftDown.Size = UDim2.new(0, 300, 0, 15)
+MouseShiftDown.ZIndex = 3
+MouseShiftDown.Font = Enum.Font.SourceSans
+MouseShiftDown.TextColor3 = Color3.fromRGB(255, 255, 255)
+MouseShiftDown.TextSize = 14.000
+
+MouseShiftUp.Name = "MouseShiftUp"
+MouseShiftUp.Parent = Content
+MouseShiftUp.Active = false
+MouseShiftUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MouseShiftUp.BackgroundTransparency = 0.500
+MouseShiftUp.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MouseShiftUp.BorderSizePixel = 0
+MouseShiftUp.Position = UDim2.new(1, 170, 0, 73)
+MouseShiftUp.Selectable = false
+MouseShiftUp.Size = UDim2.new(0, 300, 0, 15)
+MouseShiftUp.ZIndex = 3
+MouseShiftUp.Font = Enum.Font.SourceSans
+MouseShiftUp.TextColor3 = Color3.fromRGB(255, 255, 255)
+MouseShiftUp.TextSize = 14.000
+
+MouseSteer.Name = "MouseSteer"
+MouseSteer.Parent = Content
+MouseSteer.Active = false
+MouseSteer.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MouseSteer.BackgroundTransparency = 0.500
+MouseSteer.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MouseSteer.BorderSizePixel = 0
+MouseSteer.Position = UDim2.new(1, 170, 0, 53)
+MouseSteer.Selectable = false
+MouseSteer.Size = UDim2.new(0, 300, 0, 15)
+MouseSteer.ZIndex = 3
+MouseSteer.Font = Enum.Font.SourceSans
+MouseSteer.Text = "MouseMove"
+MouseSteer.TextColor3 = Color3.fromRGB(176, 176, 176)
+MouseSteer.TextSize = 14.000
+
+MouseBrake.Name = "MouseBrake"
+MouseBrake.Parent = Content
+MouseBrake.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MouseBrake.BackgroundTransparency = 0.500
+MouseBrake.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MouseBrake.BorderSizePixel = 0
+MouseBrake.Position = UDim2.new(1, 170, 0, 33)
+MouseBrake.Size = UDim2.new(0, 300, 0, 15)
+MouseBrake.ZIndex = 3
+MouseBrake.Font = Enum.Font.SourceSans
+MouseBrake.TextColor3 = Color3.fromRGB(255, 255, 255)
+MouseBrake.TextSize = 14.000
+
+MouseThrottle.Name = "MouseThrottle"
+MouseThrottle.Parent = Content
+MouseThrottle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MouseThrottle.BackgroundTransparency = 0.500
+MouseThrottle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+MouseThrottle.BorderSizePixel = 0
+MouseThrottle.Position = UDim2.new(1, 170, 0, 13)
+MouseThrottle.Size = UDim2.new(0, 300, 0, 15)
+MouseThrottle.ZIndex = 3
+MouseThrottle.Font = Enum.Font.SourceSans
+MouseThrottle.TextColor3 = Color3.fromRGB(255, 255, 255)
+MouseThrottle.TextSize = 14.000
+
+T_14.Name = "T"
+T_14.Parent = Content
+T_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_14.BackgroundTransparency = 1.000
+T_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_14.BorderSizePixel = 0
+T_14.Position = UDim2.new(1, 150, 0, 140)
+T_14.ZIndex = 3
+T_14.Font = Enum.Font.SourceSansItalic
+T_14.Text = "Handbrake"
+T_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_14.TextSize = 18.000
+T_14.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_14.TextStrokeTransparency = 0.950
+T_14.TextXAlignment = Enum.TextXAlignment.Right
+
+T_15.Name = "T"
+T_15.Parent = Content
+T_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_15.BackgroundTransparency = 1.000
+T_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_15.BorderSizePixel = 0
+T_15.Position = UDim2.new(1, 150, 0, 120)
+T_15.ZIndex = 3
+T_15.Font = Enum.Font.SourceSansItalic
+T_15.Text = "Clutch"
+T_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_15.TextSize = 18.000
+T_15.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_15.TextStrokeTransparency = 0.950
+T_15.TextXAlignment = Enum.TextXAlignment.Right
+
+T_16.Name = "T"
+T_16.Parent = Content
+T_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_16.BackgroundTransparency = 1.000
+T_16.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_16.BorderSizePixel = 0
+T_16.Position = UDim2.new(1, 150, 0, 100)
+T_16.ZIndex = 3
+T_16.Font = Enum.Font.SourceSansItalic
+T_16.Text = "Shift Down"
+T_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_16.TextSize = 18.000
+T_16.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_16.TextStrokeTransparency = 0.950
+T_16.TextXAlignment = Enum.TextXAlignment.Right
+
+T_17.Name = "T"
+T_17.Parent = Content
+T_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_17.BackgroundTransparency = 1.000
+T_17.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_17.BorderSizePixel = 0
+T_17.Position = UDim2.new(1, 150, 0, 80)
+T_17.ZIndex = 3
+T_17.Font = Enum.Font.SourceSansItalic
+T_17.Text = "Shift Up"
+T_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_17.TextSize = 18.000
+T_17.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_17.TextStrokeTransparency = 0.950
+T_17.TextXAlignment = Enum.TextXAlignment.Right
+
+T_18.Name = "T"
+T_18.Parent = Content
+T_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_18.BackgroundTransparency = 1.000
+T_18.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_18.BorderSizePixel = 0
+T_18.Position = UDim2.new(1, 150, 0, 60)
+T_18.ZIndex = 3
+T_18.Font = Enum.Font.SourceSansItalic
+T_18.Text = "Steer"
+T_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_18.TextSize = 18.000
+T_18.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_18.TextStrokeTransparency = 0.950
+T_18.TextXAlignment = Enum.TextXAlignment.Right
+
+T_19.Name = "T"
+T_19.Parent = Content
+T_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_19.BackgroundTransparency = 1.000
+T_19.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_19.BorderSizePixel = 0
+T_19.Position = UDim2.new(1, 150, 0, 40)
+T_19.ZIndex = 3
+T_19.Font = Enum.Font.SourceSansItalic
+T_19.Text = "Brakes"
+T_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_19.TextSize = 18.000
+T_19.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_19.TextStrokeTransparency = 0.950
+T_19.TextXAlignment = Enum.TextXAlignment.Right
+
+T_20.Name = "T"
+T_20.Parent = Content
+T_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_20.BackgroundTransparency = 1.000
+T_20.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_20.BorderSizePixel = 0
+T_20.Position = UDim2.new(1, 150, 0, 20)
+T_20.ZIndex = 3
+T_20.Font = Enum.Font.SourceSansItalic
+T_20.Text = "Throttle"
+T_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_20.TextSize = 18.000
+T_20.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_20.TextStrokeTransparency = 0.950
+T_20.TextXAlignment = Enum.TextXAlignment.Right
+
+ToggleABS.Name = "ToggleABS"
+ToggleABS.Parent = Content
+ToggleABS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToggleABS.BackgroundTransparency = 0.500
+ToggleABS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ToggleABS.BorderSizePixel = 0
+ToggleABS.Position = UDim2.new(0, 170, 0, 293)
+ToggleABS.Size = UDim2.new(0, 300, 0, 15)
+ToggleABS.ZIndex = 3
+ToggleABS.Font = Enum.Font.SourceSans
+ToggleABS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleABS.TextSize = 14.000
+
+ToggleTCS.Name = "ToggleTCS"
+ToggleTCS.Parent = Content
+ToggleTCS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToggleTCS.BackgroundTransparency = 0.500
+ToggleTCS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ToggleTCS.BorderSizePixel = 0
+ToggleTCS.Position = UDim2.new(0, 170, 0, 273)
+ToggleTCS.Size = UDim2.new(0, 300, 0, 15)
+ToggleTCS.ZIndex = 3
+ToggleTCS.Font = Enum.Font.SourceSans
+ToggleTCS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleTCS.TextSize = 14.000
+
+ToggleTransMode.Name = "ToggleTransMode"
+ToggleTransMode.Parent = Content
+ToggleTransMode.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToggleTransMode.BackgroundTransparency = 0.500
+ToggleTransMode.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ToggleTransMode.BorderSizePixel = 0
+ToggleTransMode.Position = UDim2.new(0, 170, 0, 253)
+ToggleTransMode.Size = UDim2.new(0, 300, 0, 15)
+ToggleTransMode.ZIndex = 3
+ToggleTransMode.Font = Enum.Font.SourceSans
+ToggleTransMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleTransMode.TextSize = 14.000
+
+PBrake.Name = "PBrake"
+PBrake.Parent = Content
+PBrake.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PBrake.BackgroundTransparency = 0.500
+PBrake.BorderColor3 = Color3.fromRGB(27, 42, 53)
+PBrake.BorderSizePixel = 0
+PBrake.Position = UDim2.new(0, 170, 0, 233)
+PBrake.Size = UDim2.new(0, 300, 0, 15)
+PBrake.ZIndex = 3
+PBrake.Font = Enum.Font.SourceSans
+PBrake.TextColor3 = Color3.fromRGB(255, 255, 255)
+PBrake.TextSize = 14.000
+
+Clutch.Name = "Clutch"
+Clutch.Parent = Content
+Clutch.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Clutch.BackgroundTransparency = 0.500
+Clutch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Clutch.BorderSizePixel = 0
+Clutch.Position = UDim2.new(0, 170, 0, 213)
+Clutch.Size = UDim2.new(0, 300, 0, 15)
+Clutch.ZIndex = 3
+Clutch.Font = Enum.Font.SourceSans
+Clutch.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clutch.TextSize = 14.000
+
+ShiftDown.Name = "ShiftDown"
+ShiftDown.Parent = Content
+ShiftDown.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ShiftDown.BackgroundTransparency = 0.500
+ShiftDown.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ShiftDown.BorderSizePixel = 0
+ShiftDown.Position = UDim2.new(0, 170, 0, 193)
+ShiftDown.Size = UDim2.new(0, 300, 0, 15)
+ShiftDown.ZIndex = 3
+ShiftDown.Font = Enum.Font.SourceSans
+ShiftDown.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShiftDown.TextSize = 14.000
+
+ShiftUp.Name = "ShiftUp"
+ShiftUp.Parent = Content
+ShiftUp.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ShiftUp.BackgroundTransparency = 0.500
+ShiftUp.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ShiftUp.BorderSizePixel = 0
+ShiftUp.Position = UDim2.new(0, 170, 0, 173)
+ShiftUp.Size = UDim2.new(0, 300, 0, 15)
+ShiftUp.ZIndex = 3
+ShiftUp.Font = Enum.Font.SourceSans
+ShiftUp.TextColor3 = Color3.fromRGB(255, 255, 255)
+ShiftUp.TextSize = 14.000
+
+SteerRight2.Name = "SteerRight2"
+SteerRight2.Parent = Content
+SteerRight2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SteerRight2.BackgroundTransparency = 0.500
+SteerRight2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SteerRight2.BorderSizePixel = 0
+SteerRight2.Position = UDim2.new(0, 170, 0, 153)
+SteerRight2.Size = UDim2.new(0, 300, 0, 15)
+SteerRight2.ZIndex = 3
+SteerRight2.Font = Enum.Font.SourceSans
+SteerRight2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SteerRight2.TextSize = 14.000
+
+SteerLeft2.Name = "SteerLeft2"
+SteerLeft2.Parent = Content
+SteerLeft2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SteerLeft2.BackgroundTransparency = 0.500
+SteerLeft2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SteerLeft2.BorderSizePixel = 0
+SteerLeft2.Position = UDim2.new(0, 170, 0, 133)
+SteerLeft2.Size = UDim2.new(0, 300, 0, 15)
+SteerLeft2.ZIndex = 3
+SteerLeft2.Font = Enum.Font.SourceSans
+SteerLeft2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SteerLeft2.TextSize = 14.000
+
+Brake2.Name = "Brake2"
+Brake2.Parent = Content
+Brake2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Brake2.BackgroundTransparency = 0.500
+Brake2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Brake2.BorderSizePixel = 0
+Brake2.Position = UDim2.new(0, 170, 0, 113)
+Brake2.Size = UDim2.new(0, 300, 0, 15)
+Brake2.ZIndex = 3
+Brake2.Font = Enum.Font.SourceSans
+Brake2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Brake2.TextSize = 14.000
+
+Throttle2.Name = "Throttle2"
+Throttle2.Parent = Content
+Throttle2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Throttle2.BackgroundTransparency = 0.500
+Throttle2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Throttle2.BorderSizePixel = 0
+Throttle2.Position = UDim2.new(0, 170, 0, 93)
+Throttle2.Size = UDim2.new(0, 300, 0, 15)
+Throttle2.ZIndex = 3
+Throttle2.Font = Enum.Font.SourceSans
+Throttle2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Throttle2.TextSize = 14.000
+
+SteerRight.Name = "SteerRight"
+SteerRight.Parent = Content
+SteerRight.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SteerRight.BackgroundTransparency = 0.500
+SteerRight.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SteerRight.BorderSizePixel = 0
+SteerRight.Position = UDim2.new(0, 170, 0, 73)
+SteerRight.Size = UDim2.new(0, 300, 0, 15)
+SteerRight.ZIndex = 3
+SteerRight.Font = Enum.Font.SourceSans
+SteerRight.TextColor3 = Color3.fromRGB(255, 255, 255)
+SteerRight.TextSize = 14.000
+
+SteerLeft.Name = "SteerLeft"
+SteerLeft.Parent = Content
+SteerLeft.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SteerLeft.BackgroundTransparency = 0.500
+SteerLeft.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SteerLeft.BorderSizePixel = 0
+SteerLeft.Position = UDim2.new(0, 170, 0, 53)
+SteerLeft.Size = UDim2.new(0, 300, 0, 15)
+SteerLeft.ZIndex = 3
+SteerLeft.Font = Enum.Font.SourceSans
+SteerLeft.TextColor3 = Color3.fromRGB(255, 255, 255)
+SteerLeft.TextSize = 14.000
+
+Brake.Name = "Brake"
+Brake.Parent = Content
+Brake.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Brake.BackgroundTransparency = 0.500
+Brake.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Brake.BorderSizePixel = 0
+Brake.Position = UDim2.new(0, 170, 0, 33)
+Brake.Size = UDim2.new(0, 300, 0, 15)
+Brake.ZIndex = 3
+Brake.Font = Enum.Font.SourceSans
+Brake.TextColor3 = Color3.fromRGB(255, 255, 255)
+Brake.TextSize = 14.000
+
+Throttle.Name = "Throttle"
+Throttle.Parent = Content
+Throttle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Throttle.BackgroundTransparency = 0.500
+Throttle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Throttle.BorderSizePixel = 0
+Throttle.Position = UDim2.new(0, 170, 0, 13)
+Throttle.Size = UDim2.new(0, 300, 0, 15)
+Throttle.ZIndex = 3
+Throttle.Font = Enum.Font.SourceSans
+Throttle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Throttle.TextSize = 14.000
+
+T_21.Name = "T"
+T_21.Parent = Content
+T_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_21.BackgroundTransparency = 1.000
+T_21.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_21.BorderSizePixel = 0
+T_21.Position = UDim2.new(0, 150, 0, 300)
+T_21.ZIndex = 3
+T_21.Font = Enum.Font.SourceSansItalic
+T_21.Text = "Toggle ABS"
+T_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_21.TextSize = 18.000
+T_21.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_21.TextStrokeTransparency = 0.950
+T_21.TextXAlignment = Enum.TextXAlignment.Right
+
+T_22.Name = "T"
+T_22.Parent = Content
+T_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_22.BackgroundTransparency = 1.000
+T_22.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_22.BorderSizePixel = 0
+T_22.Position = UDim2.new(0, 150, 0, 280)
+T_22.ZIndex = 3
+T_22.Font = Enum.Font.SourceSansItalic
+T_22.Text = "Toggle TCS"
+T_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_22.TextSize = 18.000
+T_22.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_22.TextStrokeTransparency = 0.950
+T_22.TextXAlignment = Enum.TextXAlignment.Right
+
+T_23.Name = "T"
+T_23.Parent = Content
+T_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_23.BackgroundTransparency = 1.000
+T_23.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_23.BorderSizePixel = 0
+T_23.Position = UDim2.new(0, 150, 0, 260)
+T_23.ZIndex = 3
+T_23.Font = Enum.Font.SourceSansItalic
+T_23.Text = "Transmission Mode"
+T_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_23.TextSize = 18.000
+T_23.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_23.TextStrokeTransparency = 0.950
+T_23.TextXAlignment = Enum.TextXAlignment.Right
+
+T_24.Name = "T"
+T_24.Parent = Content
+T_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_24.BackgroundTransparency = 1.000
+T_24.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_24.BorderSizePixel = 0
+T_24.Position = UDim2.new(0, 150, 0, 240)
+T_24.ZIndex = 3
+T_24.Font = Enum.Font.SourceSansItalic
+T_24.Text = "Handbrake"
+T_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_24.TextSize = 18.000
+T_24.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_24.TextStrokeTransparency = 0.950
+T_24.TextXAlignment = Enum.TextXAlignment.Right
+
+T_25.Name = "T"
+T_25.Parent = Content
+T_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_25.BackgroundTransparency = 1.000
+T_25.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_25.BorderSizePixel = 0
+T_25.Position = UDim2.new(0, 150, 0, 220)
+T_25.ZIndex = 3
+T_25.Font = Enum.Font.SourceSansItalic
+T_25.Text = "Clutch"
+T_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_25.TextSize = 18.000
+T_25.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_25.TextStrokeTransparency = 0.950
+T_25.TextXAlignment = Enum.TextXAlignment.Right
+
+T_26.Name = "T"
+T_26.Parent = Content
+T_26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_26.BackgroundTransparency = 1.000
+T_26.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_26.BorderSizePixel = 0
+T_26.Position = UDim2.new(0, 150, 0, 200)
+T_26.ZIndex = 3
+T_26.Font = Enum.Font.SourceSansItalic
+T_26.Text = "Shift Down"
+T_26.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_26.TextSize = 18.000
+T_26.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_26.TextStrokeTransparency = 0.950
+T_26.TextXAlignment = Enum.TextXAlignment.Right
+
+T_27.Name = "T"
+T_27.Parent = Content
+T_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_27.BackgroundTransparency = 1.000
+T_27.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_27.BorderSizePixel = 0
+T_27.Position = UDim2.new(0, 150, 0, 180)
+T_27.ZIndex = 3
+T_27.Font = Enum.Font.SourceSansItalic
+T_27.Text = "Shift Up"
+T_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_27.TextSize = 18.000
+T_27.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_27.TextStrokeTransparency = 0.950
+T_27.TextXAlignment = Enum.TextXAlignment.Right
+
+T_28.Name = "T"
+T_28.Parent = Content
+T_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_28.BackgroundTransparency = 1.000
+T_28.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_28.BorderSizePixel = 0
+T_28.Position = UDim2.new(0, 150, 0, 160)
+T_28.ZIndex = 3
+T_28.Font = Enum.Font.SourceSansItalic
+T_28.Text = "[Secondary] SteerRight"
+T_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_28.TextSize = 18.000
+T_28.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_28.TextStrokeTransparency = 0.950
+T_28.TextXAlignment = Enum.TextXAlignment.Right
+
+T_29.Name = "T"
+T_29.Parent = Content
+T_29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_29.BackgroundTransparency = 1.000
+T_29.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_29.BorderSizePixel = 0
+T_29.Position = UDim2.new(0, 150, 0, 140)
+T_29.ZIndex = 3
+T_29.Font = Enum.Font.SourceSansItalic
+T_29.Text = "[Secondary]   Steer Left"
+T_29.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_29.TextSize = 18.000
+T_29.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_29.TextStrokeTransparency = 0.950
+T_29.TextXAlignment = Enum.TextXAlignment.Right
+
+T_30.Name = "T"
+T_30.Parent = Content
+T_30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_30.BackgroundTransparency = 1.000
+T_30.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_30.BorderSizePixel = 0
+T_30.Position = UDim2.new(0, 150, 0, 120)
+T_30.ZIndex = 3
+T_30.Font = Enum.Font.SourceSansItalic
+T_30.Text = "[Secondary]        Brakes"
+T_30.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_30.TextSize = 18.000
+T_30.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_30.TextStrokeTransparency = 0.950
+T_30.TextXAlignment = Enum.TextXAlignment.Right
+
+T_31.Name = "T"
+T_31.Parent = Content
+T_31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_31.BackgroundTransparency = 1.000
+T_31.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_31.BorderSizePixel = 0
+T_31.Position = UDim2.new(0, 150, 0, 100)
+T_31.ZIndex = 3
+T_31.Font = Enum.Font.SourceSansItalic
+T_31.Text = "[Secondary]     Throttle"
+T_31.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_31.TextSize = 18.000
+T_31.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_31.TextStrokeTransparency = 0.950
+T_31.TextXAlignment = Enum.TextXAlignment.Right
+
+T_32.Name = "T"
+T_32.Parent = Content
+T_32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_32.BackgroundTransparency = 1.000
+T_32.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_32.BorderSizePixel = 0
+T_32.Position = UDim2.new(0, 150, 0, 80)
+T_32.ZIndex = 3
+T_32.Font = Enum.Font.SourceSansItalic
+T_32.Text = "Steer Right"
+T_32.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_32.TextSize = 18.000
+T_32.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_32.TextStrokeTransparency = 0.950
+T_32.TextXAlignment = Enum.TextXAlignment.Right
+
+T_33.Name = "T"
+T_33.Parent = Content
+T_33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_33.BackgroundTransparency = 1.000
+T_33.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_33.BorderSizePixel = 0
+T_33.Position = UDim2.new(0, 150, 0, 60)
+T_33.ZIndex = 3
+T_33.Font = Enum.Font.SourceSansItalic
+T_33.Text = "Steer Left"
+T_33.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_33.TextSize = 18.000
+T_33.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_33.TextStrokeTransparency = 0.950
+T_33.TextXAlignment = Enum.TextXAlignment.Right
+
+T_34.Name = "T"
+T_34.Parent = Content
+T_34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_34.BackgroundTransparency = 1.000
+T_34.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_34.BorderSizePixel = 0
+T_34.Position = UDim2.new(0, 150, 0, 40)
+T_34.ZIndex = 3
+T_34.Font = Enum.Font.SourceSansItalic
+T_34.Text = "Brakes"
+T_34.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_34.TextSize = 18.000
+T_34.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_34.TextStrokeTransparency = 0.950
+T_34.TextXAlignment = Enum.TextXAlignment.Right
+
+T_35.Name = "T"
+T_35.Parent = Content
+T_35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_35.BackgroundTransparency = 1.000
+T_35.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_35.BorderSizePixel = 0
+T_35.Position = UDim2.new(0, 150, 0, 20)
+T_35.ZIndex = 3
+T_35.Font = Enum.Font.SourceSansItalic
+T_35.Text = "Throttle"
+T_35.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_35.TextSize = 18.000
+T_35.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_35.TextStrokeTransparency = 0.950
+T_35.TextXAlignment = Enum.TextXAlignment.Right
+
+ToggleMouseDrive.Name = "ToggleMouseDrive"
+ToggleMouseDrive.Parent = Content
+ToggleMouseDrive.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ToggleMouseDrive.BackgroundTransparency = 0.500
+ToggleMouseDrive.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ToggleMouseDrive.BorderSizePixel = 0
+ToggleMouseDrive.Position = UDim2.new(0, 170, 0, 313)
+ToggleMouseDrive.Size = UDim2.new(0, 300, 0, 15)
+ToggleMouseDrive.ZIndex = 3
+ToggleMouseDrive.Font = Enum.Font.SourceSans
+ToggleMouseDrive.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleMouseDrive.TextSize = 14.000
+
+T_36.Name = "T"
+T_36.Parent = Content
+T_36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_36.BackgroundTransparency = 1.000
+T_36.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_36.BorderSizePixel = 0
+T_36.Position = UDim2.new(0, 150, 0, 320)
+T_36.ZIndex = 3
+T_36.Font = Enum.Font.SourceSansItalic
+T_36.Text = "Switch Mouse Control"
+T_36.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_36.TextSize = 18.000
+T_36.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_36.TextStrokeTransparency = 0.950
+T_36.TextXAlignment = Enum.TextXAlignment.Right
+
+T_37.Name = "T"
+T_37.Parent = Content
+T_37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T_37.BackgroundTransparency = 1.000
+T_37.BorderColor3 = Color3.fromRGB(27, 42, 53)
+T_37.BorderSizePixel = 0
+T_37.Position = UDim2.new(2, 150, 0, 200)
+T_37.ZIndex = 3
+T_37.Font = Enum.Font.SourceSansItalic
+T_37.Text = "Toggle ABS"
+T_37.TextColor3 = Color3.fromRGB(255, 255, 255)
+T_37.TextSize = 18.000
+T_37.TextStrokeColor3 = Color3.fromRGB(100, 100, 100)
+T_37.TextStrokeTransparency = 0.950
+T_37.TextXAlignment = Enum.TextXAlignment.Right
+
+ContlrToggleABS.Name = "ContlrToggleABS"
+ContlrToggleABS.Parent = Content
+ContlrToggleABS.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ContlrToggleABS.BackgroundTransparency = 0.500
+ContlrToggleABS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ContlrToggleABS.BorderSizePixel = 0
+ContlrToggleABS.Position = UDim2.new(2, 170, 0, 193)
+ContlrToggleABS.Size = UDim2.new(0, 300, 0, 15)
+ContlrToggleABS.ZIndex = 3
+ContlrToggleABS.Font = Enum.Font.SourceSans
+ContlrToggleABS.TextColor3 = Color3.fromRGB(255, 255, 255)
+ContlrToggleABS.TextSize = 14.000
+
+Toggle.Name = "Toggle"
+Toggle.Parent = AC6_Controls_Module
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+Toggle.BackgroundTransparency = 0.500
+Toggle.BorderColor3 = Color3.fromRGB(150, 150, 150)
+Toggle.BorderSizePixel = 0
+Toggle.Position = UDim2.new(0.5, -50, 1, 10)
+Toggle.Size = UDim2.new(0, 100, 0, 18)
+Toggle.ZIndex = 5
+Toggle.Font = Enum.Font.Arial
+Toggle.Text = "Controls"
+Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.TextSize = 16.000
+Toggle.TextStrokeColor3 = Color3.fromRGB(106, 106, 106)
+Toggle.TextYAlignment = Enum.TextYAlignment.Bottom
+
+SS6DynamicFriction.Name = "[SS6] Dynamic Friction"
+SS6DynamicFriction.Parent = Plugins
+SS6DynamicFriction.AnchorPoint = Vector2.new(0, 1)
+SS6DynamicFriction.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SS6DynamicFriction.BackgroundTransparency = 1.000
+SS6DynamicFriction.BorderColor3 = Color3.fromRGB(27, 42, 53)
+SS6DynamicFriction.BorderSizePixel = 0
+SS6DynamicFriction.Position = UDim2.new(0.0450000018, 0, 0.870000005, 0)
+SS6DynamicFriction.Size = UDim2.new(0.349999994, 0, 0.349999994, 0)
+SS6DynamicFriction.ImageTransparency = 1.000
+
+UISizeConstraint.Parent = SS6DynamicFriction
+UISizeConstraint.MaxSize = Vector2.new(200, 200)
+UISizeConstraint.MinSize = Vector2.new(150, 150)
+
+UIAspectRatioConstraint.Parent = SS6DynamicFriction
+UIAspectRatioConstraint.AspectRatio = 0.604
+
+Tires.Name = "Tires"
+Tires.Parent = SS6DynamicFriction
+Tires.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tires.BackgroundTransparency = 1.000
+Tires.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Tires.Size = UDim2.new(1, 0, 1, 0)
+
+RL.Name = "RL"
+RL.Parent = Tires
+RL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RL.BackgroundTransparency = 1.000
+RL.BorderColor3 = Color3.fromRGB(27, 42, 53)
+RL.ClipsDescendants = true
+RL.Position = UDim2.new(0.119000003, 0, 0.524999976, 0)
+RL.Size = UDim2.new(0.184, 0, 0.224000007, 0)
+RL.ZIndex = 3
+
+First.Name = "First"
+First.Parent = RL
+First.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+First.BackgroundTransparency = 1.000
+First.BorderColor3 = Color3.fromRGB(27, 42, 53)
+First.ClipsDescendants = true
+First.Size = UDim2.new(1, 0, 1, 0)
+First.ZIndex = 3
+
+Second.Name = "Second"
+Second.Parent = First
+Second.AnchorPoint = Vector2.new(0, 1)
+Second.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Second.BackgroundTransparency = 1.000
+Second.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Second.ClipsDescendants = true
+Second.Position = UDim2.new(0, 0, 1, 0)
+Second.Size = UDim2.new(1, 0, 1, 0)
+Second.ZIndex = 3
+
+Image.Name = "Image"
+Image.Parent = Second
+Image.AnchorPoint = Vector2.new(0, 1)
+Image.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image.BackgroundTransparency = 1.000
+Image.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Image.BorderSizePixel = 0
+Image.Position = UDim2.new(0, 0, 1, 0)
+Image.Size = UDim2.new(1, 0, 1, 0)
+Image.ZIndex = 2
+Image.Image = "rbxassetid://742902682"
+Image.ImageColor3 = Color3.fromRGB(110, 255, 0)
+Image.ImageTransparency = 0.500
+
+RR.Name = "RR"
+RR.Parent = Tires
+RR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RR.BackgroundTransparency = 1.000
+RR.BorderColor3 = Color3.fromRGB(27, 42, 53)
+RR.ClipsDescendants = true
+RR.Position = UDim2.new(0.697000027, 0, 0.524999976, 0)
+RR.Size = UDim2.new(0.184, 0, 0.224000007, 0)
+RR.ZIndex = 3
+
+First_2.Name = "First"
+First_2.Parent = RR
+First_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+First_2.BackgroundTransparency = 1.000
+First_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+First_2.ClipsDescendants = true
+First_2.Size = UDim2.new(1, 0, 1, 0)
+First_2.ZIndex = 3
+
+Second_2.Name = "Second"
+Second_2.Parent = First_2
+Second_2.AnchorPoint = Vector2.new(0, 1)
+Second_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Second_2.BackgroundTransparency = 1.000
+Second_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Second_2.ClipsDescendants = true
+Second_2.Position = UDim2.new(0, 0, 1, 0)
+Second_2.Size = UDim2.new(1, 0, 1, 0)
+Second_2.ZIndex = 3
+
+Image_2.Name = "Image"
+Image_2.Parent = Second_2
+Image_2.AnchorPoint = Vector2.new(0, 1)
+Image_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image_2.BackgroundTransparency = 1.000
+Image_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Image_2.BorderSizePixel = 0
+Image_2.Position = UDim2.new(0, 0, 1, 0)
+Image_2.Size = UDim2.new(1, 0, 1, 0)
+Image_2.ZIndex = 2
+Image_2.Image = "rbxassetid://742902682"
+Image_2.ImageColor3 = Color3.fromRGB(110, 255, 0)
+Image_2.ImageTransparency = 0.500
+
+FL.Name = "FL"
+FL.Parent = Tires
+FL.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FL.BackgroundTransparency = 1.000
+FL.BorderColor3 = Color3.fromRGB(27, 42, 53)
+FL.ClipsDescendants = true
+FL.Position = UDim2.new(0.119000003, 0, 0.0710000023, 0)
+FL.Size = UDim2.new(0.184, 0, 0.224000007, 0)
+FL.ZIndex = 3
+
+First_3.Name = "First"
+First_3.Parent = FL
+First_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+First_3.BackgroundTransparency = 1.000
+First_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+First_3.ClipsDescendants = true
+First_3.Size = UDim2.new(1, 0, 1, 0)
+First_3.ZIndex = 3
+
+Second_3.Name = "Second"
+Second_3.Parent = First_3
+Second_3.AnchorPoint = Vector2.new(0, 1)
+Second_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Second_3.BackgroundTransparency = 1.000
+Second_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Second_3.ClipsDescendants = true
+Second_3.Position = UDim2.new(0, 0, 1, 0)
+Second_3.Size = UDim2.new(1, 0, 1, 0)
+Second_3.ZIndex = 3
+
+Image_3.Name = "Image"
+Image_3.Parent = Second_3
+Image_3.AnchorPoint = Vector2.new(0, 1)
+Image_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image_3.BackgroundTransparency = 1.000
+Image_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Image_3.BorderSizePixel = 0
+Image_3.Position = UDim2.new(0, 0, 1, 0)
+Image_3.Size = UDim2.new(1, 0, 1, 0)
+Image_3.ZIndex = 2
+Image_3.Image = "rbxassetid://742902682"
+Image_3.ImageColor3 = Color3.fromRGB(110, 255, 0)
+Image_3.ImageTransparency = 0.500
+
+FR.Name = "FR"
+FR.Parent = Tires
+FR.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FR.BackgroundTransparency = 1.000
+FR.BorderColor3 = Color3.fromRGB(27, 42, 53)
+FR.ClipsDescendants = true
+FR.Position = UDim2.new(0.697000027, 0, 0.0710000023, 0)
+FR.Size = UDim2.new(0.184, 0, 0.224000007, 0)
+FR.ZIndex = 3
+
+First_4.Name = "First"
+First_4.Parent = FR
+First_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+First_4.BackgroundTransparency = 1.000
+First_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+First_4.ClipsDescendants = true
+First_4.Size = UDim2.new(1, 0, 1, 0)
+First_4.ZIndex = 3
+
+Second_4.Name = "Second"
+Second_4.Parent = First_4
+Second_4.AnchorPoint = Vector2.new(0, 1)
+Second_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Second_4.BackgroundTransparency = 1.000
+Second_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Second_4.ClipsDescendants = true
+Second_4.Position = UDim2.new(0, 0, 1, 0)
+Second_4.Size = UDim2.new(1, 0, 1, 0)
+Second_4.ZIndex = 3
+
+Image_4.Name = "Image"
+Image_4.Parent = Second_4
+Image_4.AnchorPoint = Vector2.new(0, 1)
+Image_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Image_4.BackgroundTransparency = 1.000
+Image_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Image_4.BorderSizePixel = 0
+Image_4.Position = UDim2.new(0, 0, 1, 0)
+Image_4.Size = UDim2.new(1, 0, 1, 0)
+Image_4.ZIndex = 2
+Image_4.Image = "rbxassetid://742902682"
+Image_4.ImageColor3 = Color3.fromRGB(110, 255, 0)
+Image_4.ImageTransparency = 0.500
+
+Background.Name = "Background"
+Background.Parent = SS6DynamicFriction
+Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Background.BackgroundTransparency = 1.000
+Background.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Background.BorderSizePixel = 0
+Background.ClipsDescendants = true
+Background.Size = UDim2.new(1, 0, 0.800000012, 0)
+
+L.Name = "L"
+L.Parent = Background
+L.AnchorPoint = Vector2.new(0, 1)
+L.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+L.BackgroundTransparency = 1.000
+L.BorderColor3 = Color3.fromRGB(27, 42, 53)
+L.BorderSizePixel = 0
+L.Position = UDim2.new(0, 0, 1.25, 0)
+L.Size = UDim2.new(1, 0, 1.25, 0)
+L.Image = "rbxassetid://719863736"
+
+WearData.Name = "WearData"
+WearData.Parent = SS6DynamicFriction
+
+AC6_Stock_Gauges.Name = "AC6_Stock_Gauges"
+AC6_Stock_Gauges.Parent = Plugins
+AC6_Stock_Gauges.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AC6_Stock_Gauges.BackgroundTransparency = 1.000
+AC6_Stock_Gauges.BorderColor3 = Color3.fromRGB(27, 42, 53)
+AC6_Stock_Gauges.BorderSizePixel = 0
+AC6_Stock_Gauges.Size = UDim2.new(1, 0, 1, 0)
+
+Tach.Name = "Tach"
+Tach.Parent = AC6_Stock_Gauges
+Tach.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tach.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Tach.BorderSizePixel = 0
+Tach.Position = UDim2.new(0.5, -150, 1, -100)
+
+Needle.Name = "Needle"
+Needle.Parent = Tach
+Needle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Needle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Needle.BorderSizePixel = 0
+Needle.Rotation = 45.000
+
+Frame.Parent = Needle
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BackgroundTransparency = 0.100
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, -2, 0, -10)
+Frame.Size = UDim2.new(0, 4, 0, 110)
+Frame.ZIndex = 2
+
+Speedo.Name = "Speedo"
+Speedo.Parent = AC6_Stock_Gauges
+Speedo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Speedo.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Speedo.BorderSizePixel = 0
+Speedo.Position = UDim2.new(0.5, 150, 1, -100)
+
+Needle_2.Name = "Needle"
+Needle_2.Parent = Speedo
+Needle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Needle_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Needle_2.BorderSizePixel = 0
+Needle_2.Rotation = 45.000
+
+Frame_2.Parent = Needle_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame_2.BackgroundTransparency = 0.100
+Frame_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, -2, 0, -10)
+Frame_2.Size = UDim2.new(0, 4, 0, 110)
+Frame_2.ZIndex = 2
+
+ln.Name = "ln"
+ln.Parent = AC6_Stock_Gauges
+ln.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ln.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ln.BorderSizePixel = 0
+ln.Rotation = 45.000
+ln.Visible = false
+
+Frame_3.Parent = ln
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 0.100
+Frame_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0, -2, 0, 105)
+Frame_3.Size = UDim2.new(0, 3, 0, 5)
+
+Num.Name = "Num"
+Num.Parent = ln
+Num.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Num.BackgroundTransparency = 1.000
+Num.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Num.BorderSizePixel = 0
+Num.Position = UDim2.new(0, 0, 0, 88)
+Num.Rotation = -45.000
+Num.Visible = false
+Num.Font = Enum.Font.ArialBold
+Num.Text = "0"
+Num.TextColor3 = Color3.fromRGB(255, 255, 255)
+Num.TextSize = 18.000
+Num.TextStrokeColor3 = Color3.fromRGB(213, 213, 213)
+Num.TextStrokeTransparency = 0.900
+Num.TextTransparency = 0.100
+
+Gear.Name = "Gear"
+Gear.Parent = AC6_Stock_Gauges
+Gear.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gear.BackgroundTransparency = 1.000
+Gear.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Gear.BorderSizePixel = 0
+Gear.Position = UDim2.new(0.5, -120, 1, -70)
+Gear.Font = Enum.Font.ArialBold
+Gear.Text = "N"
+Gear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gear.TextSize = 48.000
+Gear.TextStrokeColor3 = Color3.fromRGB(213, 213, 213)
+Gear.TextStrokeTransparency = 0.900
+Gear.TextTransparency = 0.100
+
+ABS.Name = "ABS"
+ABS.Parent = AC6_Stock_Gauges
+ABS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ABS.BackgroundTransparency = 1.000
+ABS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ABS.BorderSizePixel = 0
+ABS.Position = UDim2.new(0.5, 130, 1, -100)
+ABS.Visible = false
+ABS.Font = Enum.Font.ArialBold
+ABS.Text = "ABS"
+ABS.TextColor3 = Color3.fromRGB(255, 170, 0)
+ABS.TextSize = 18.000
+ABS.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+ABS.TextStrokeTransparency = 0.900
+ABS.TextTransparency = 0.100
+ABS.TextXAlignment = Enum.TextXAlignment.Right
+
+PBrake_2.Name = "PBrake"
+PBrake_2.Parent = AC6_Stock_Gauges
+PBrake_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PBrake_2.BackgroundTransparency = 1.000
+PBrake_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+PBrake_2.BorderSizePixel = 0
+PBrake_2.Position = UDim2.new(0.5, 200, 1, -120)
+PBrake_2.Visible = false
+PBrake_2.Font = Enum.Font.ArialBold
+PBrake_2.Text = "P"
+PBrake_2.TextColor3 = Color3.fromRGB(255, 85, 127)
+PBrake_2.TextSize = 24.000
+PBrake_2.TextStrokeColor3 = Color3.fromRGB(255, 85, 127)
+PBrake_2.TextStrokeTransparency = 0.900
+PBrake_2.TextTransparency = 0.100
+PBrake_2.TextXAlignment = Enum.TextXAlignment.Right
+
+TCS.Name = "TCS"
+TCS.Parent = AC6_Stock_Gauges
+TCS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TCS.BackgroundTransparency = 1.000
+TCS.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TCS.BorderSizePixel = 0
+TCS.Position = UDim2.new(0.5, 130, 1, -120)
+TCS.Visible = false
+TCS.Font = Enum.Font.ArialBold
+TCS.Text = "TCS"
+TCS.TextColor3 = Color3.fromRGB(255, 170, 0)
+TCS.TextSize = 18.000
+TCS.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+TCS.TextStrokeTransparency = 0.900
+TCS.TextTransparency = 0.100
+TCS.TextXAlignment = Enum.TextXAlignment.Right
+
+TMode.Name = "TMode"
+TMode.Parent = AC6_Stock_Gauges
+TMode.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+TMode.BackgroundTransparency = 0.500
+TMode.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TMode.BorderSizePixel = 0
+TMode.Position = UDim2.new(0.5, -165, 1, -40)
+TMode.Size = UDim2.new(0, 40, 0, 20)
+TMode.Font = Enum.Font.ArialBold
+TMode.Text = "A/T"
+TMode.TextColor3 = Color3.fromRGB(255, 255, 255)
+TMode.TextSize = 18.000
+TMode.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+TMode.TextStrokeTransparency = 0.900
+TMode.TextTransparency = 0.100
+
+Speed.Name = "Speed"
+Speed.Parent = AC6_Stock_Gauges
+Speed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Speed.BackgroundTransparency = 1.000
+Speed.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0.5, 150, 1, -80)
+Speed.Size = UDim2.new(0, 100, 0, 20)
+Speed.ZIndex = 2
+Speed.Font = Enum.Font.ArialBold
+Speed.Text = "0 SPS"
+Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed.TextSize = 24.000
+Speed.TextStrokeColor3 = Color3.fromRGB(213, 213, 213)
+Speed.TextStrokeTransparency = 0.900
+Speed.TextTransparency = 0.100
+Speed.TextXAlignment = Enum.TextXAlignment.Right
+
+ABS_2.Name = "ABS"
+ABS_2.Parent = AC6_Stock_Gauges
+ABS_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ABS_2.BackgroundTransparency = 1.000
+ABS_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+ABS_2.BorderSizePixel = 0
+ABS_2.Position = UDim2.new(0.5, 130, 1, -140)
+ABS_2.Visible = false
+ABS_2.Font = Enum.Font.ArialBold
+ABS_2.Text = "ABS"
+ABS_2.TextColor3 = Color3.fromRGB(255, 170, 0)
+ABS_2.TextSize = 18.000
+ABS_2.TextStrokeColor3 = Color3.fromRGB(255, 170, 0)
+ABS_2.TextStrokeTransparency = 0.900
+ABS_2.TextTransparency = 0.100
+ABS_2.TextXAlignment = Enum.TextXAlignment.Right
+
+AChassisInterface.Name = "A-Chassis Interface"
+AChassisInterface.Parent = game.StarterGui.Executor.main.LoadString
+
+Values.Name = "Values"
+Values.Parent = AChassisInterface
+
+R6.Name = "R6"
+R6.Parent = main
+R6.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+R6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+R6.BorderSizePixel = 0
+R6.Position = UDim2.new(0, 703, 0, 402)
+R6.Size = UDim2.new(0, 74, 0, 50)
+R6.Font = Enum.Font.SourceSans
+R6.Text = "R6"
+R6.TextColor3 = Color3.fromRGB(255, 255, 255)
+R6.TextSize = 25.000
+R6.TextWrapped = true
+
+UICorner.Parent = R6
+
+Exe.Name = "Exe"
+Exe.Parent = main
+Exe.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Exe.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Exe.BorderSizePixel = 0
+Exe.Position = UDim2.new(0, 9, 0, 402)
+Exe.Size = UDim2.new(0, 150, 0, 50)
+Exe.Font = Enum.Font.SourceSans
+Exe.Text = "Execute"
+Exe.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exe.TextSize = 25.000
+Exe.TextWrapped = true
+
+UICorner_2.Parent = Exe
+
+Cle.Name = "Cle"
+Cle.Parent = main
+Cle.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Cle.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Cle.BorderSizePixel = 0
+Cle.Position = UDim2.new(0, 172, 0, 402)
+Cle.Size = UDim2.new(0, 149, 0, 50)
+Cle.Font = Enum.Font.SourceSans
+Cle.Text = "Clear Script"
+Cle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cle.TextSize = 23.000
+Cle.TextWrapped = true
+
+UICorner_3.Parent = Cle
+
+Frame1.Name = "Frame1"
+Frame1.Parent = main
+Frame1.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Frame1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame1.BorderSizePixel = 0
+Frame1.ClipsDescendants = true
+Frame1.Position = UDim2.new(0, 9, 0, 56)
+Frame1.Size = UDim2.new(0, 769, 0, 336)
+
+TextBox.Parent = Frame1
+TextBox.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+TextBox.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.00389105082, 0, -0.00173986529, 0)
+TextBox.Size = UDim2.new(0, 766, 0, 336)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.Code
+TextBox.MultiLine = true
+TextBox.PlaceholderColor3 = Color3.fromRGB(74, 221, 221)
+TextBox.PlaceholderText = "--scripts in here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(74, 221, 221)
+TextBox.TextSize = 15.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+-- Scripts:
+
+local function NYEWP_fake_script() -- main.Main Script 
+	local script = Instance.new('LocalScript', main)
+
+	script.Parent.Clear.MouseButton1Click:Connect(function()
+		script.Parent.ScriptBox.Text = ""
+	end)
+	
+	script.Parent.Execute.MouseButton1Click:Connect(function()
+		require(script.Parent.Execute)(script.Parent.ScriptBox.Text)()
+	end)
+end
+coroutine.wrap(NYEWP_fake_script)()
+local function SKTTISY_fake_script() -- AC6_Controls_Module.Controls_AC6 
+	local script = Instance.new('LocalScript', AC6_Controls_Module)
+
+	--[[
+			___      _______                _     
+		   / _ |____/ ___/ /  ___ ____ ___ (_)__ 
+		  / __ /___/ /__/ _ \/ _ `(_-<(_-</ (_-<
+		 /_/ |_|   \___/_//_/\_,_/___/___/_/___/
+	 						SecondLogic @ Inspare
+	]]
+	
+	
+	---Controls UI
+	script.Parent.Parent:WaitForChild("Controls")
+	script.Parent.Parent:WaitForChild("ControlsOpen")
+	script.Parent:WaitForChild("Window")
+	script.Parent:WaitForChild("Toggle")
+	
+	local car = script.Parent.Parent.Car.Value
+	local _Tune = require(car["A-Chassis Tune"])
+	local UserInputService = game:GetService("UserInputService")
+	local cPanel = script.Parent
+	local Controls = script.Parent.Parent.Controls
+	
+	local ver = require(car["A-Chassis Tune"].README)
+	cPanel.Window["//INSPARE"].Text = "A-Chassis "..ver.." // INSPARE"
+	
+	local controlsOpen = false
+	local cInputB = nil
+	local cInputT = nil
+	local cInput = false
+	
+	local UIS1 = nil
+	local UIS2 = nil
+	
+	for i,v in pairs(_Tune.Peripherals) do
+		script.Parent.Parent.Controls:WaitForChild(i)
+		local slider = cPanel.Window.Content[i]
+		slider.Text = v.."%"
+		slider.S.CanvasPosition=Vector2.new(v*(slider.S.CanvasSize.X.Offset-slider.S.Size.X.Offset)/100,0)
+		slider.S.Changed:connect(function(property)
+			if property=="CanvasPosition" then
+				Controls[i].Value = math.floor(100*slider.S.CanvasPosition.x/(slider.S.CanvasSize.X.Offset-slider.S.Size.X.Offset))
+				slider.Text = Controls[i].Value.."%"
+			end
+		end)
+	end
+	
+	for i,v in pairs(_Tune.Controls) do
+		script.Parent.Parent.Controls:WaitForChild(i)
+		local button = cPanel.Window.Content[i]
+		button.Text = v.Name
+		button.MouseButton1Click:connect(function()
+			if UIS1 ~= nil then UIS1:disconnect() end
+			if UIS2 ~= nil then UIS2:disconnect() end
+			UIS1 = UserInputService.InputBegan:connect(function(input) 
+				if cInput then
+					cInputB = input.KeyCode
+					cInputT = input.UserInputType
+				end
+			end)
+			UIS2 = UserInputService.InputChanged:connect(function(input)
+				if cInput and (input.KeyCode==Enum.KeyCode.Thumbstick1 or input.KeyCode==Enum.KeyCode.Thumbstick2) then
+					cInputB = input.KeyCode
+					cInputT = input.UserInputType
+				end
+			end)
+			script.Parent.Parent.ControlsOpen.Value = true
+			cPanel.Window.Overlay.Visible = true
+			cInput = true
+			repeat wait() until cInputB~=nil
+			if UIS1 ~= nil then UIS1:disconnect() end
+			if UIS2 ~= nil then UIS2:disconnect() end
+			if cInputB == Enum.KeyCode.Return or cInputB == Enum.KeyCode.KeypadEnter then
+				--do nothing
+			elseif string.find(i,"Contlr")~=nil then
+				if cInputT.Name:find("Gamepad") then
+					Controls[i].Value = cInputB.Name
+					button.Text = cInputB.Name
+				else
+					cPanel.Window.Error.Visible = true
+				end
+			elseif i=="MouseThrottle" or i=="MouseBrake" then
+				if cInputT == Enum.UserInputType.MouseButton1 or cInputT == Enum.UserInputType.MouseButton2 then
+					Controls[i].Value = cInputT.Name
+					button.Text = cInputT.Name
+				elseif cInputT ==  Enum.UserInputType.Keyboard then
+					Controls[i].Value = cInputB.Name
+					button.Text = cInputB.Name	
+				else
+					cPanel.Window.Error.Visible = true
+				end	
+			else
+				if cInputT == Enum.UserInputType.Keyboard then
+					Controls[i].Value = cInputB.Name
+					button.Text = cInputB.Name
+				else
+					cPanel.Window.Error.Visible = true
+				end
+			end
+			cInputB = nil
+			cInputT = nil
+			cInput = false
+			wait(.2)
+			cPanel.Window.Overlay.Visible = false
+			script.Parent.Parent.ControlsOpen.Value = false
+		end)
+	end
+	
+	cPanel.Window.Error.Changed:connect(function(property)
+		if property == "Visible" then
+			wait(3)
+			cPanel.Window.Error.Visible = false
+		end
+	end)
+	
+	cPanel.Toggle.MouseButton1Click:connect(function()
+		controlsOpen = not controlsOpen
+		if controlsOpen then
+			cPanel.Toggle.BackgroundColor3 = Color3.new(1,85/255,.5)
+			cPanel.Window:TweenPosition(UDim2.new(0.5, -250,0.5, -250),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.7,true)
+		else
+			if UIS1 ~= nil then UIS1:disconnect() end
+			if UIS2 ~= nil then UIS2:disconnect() end
+			cPanel.Toggle.BackgroundColor3 = Color3.new(1,170/255,0)
+			cPanel.Window:TweenPosition(UDim2.new(0.5, -250,0, -500),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.7,true)
+		end
+	end)
+	
+	cPanel.Window.Tabs.Keyboard.MouseButton1Click:connect(function()
+		cPanel.Window.Content:TweenPosition(UDim2.new(0, 0, 0, 60),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Keyboard:TweenPosition(UDim2.new(0, 5, 0, 0),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Mouse:TweenPosition(UDim2.new(0, 120, 0, -5),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Controller:TweenPosition(UDim2.new(0, 235, 0, -5),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+	end)
+	
+	cPanel.Window.Tabs.Mouse.MouseButton1Click:connect(function()
+		cPanel.Window.Content:TweenPosition(UDim2.new(-1, 0, 0, 60),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Keyboard:TweenPosition(UDim2.new(0, 5, 0, -5),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Mouse:TweenPosition(UDim2.new(0, 120, 0, 0),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Controller:TweenPosition(UDim2.new(0, 235, 0, -5),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+	end)
+	
+	cPanel.Window.Tabs.Controller.MouseButton1Click:connect(function()
+		cPanel.Window.Content:TweenPosition(UDim2.new(-2, 0, 0, 60),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Keyboard:TweenPosition(UDim2.new(0, 5, 0, -5),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Mouse:TweenPosition(UDim2.new(0, 120, 0, -5),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+		cPanel.Window.Tabs.Controller:TweenPosition(UDim2.new(0, 235, 0, 0),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,true)
+	end)
+	
+	wait(.5)
+	cPanel.Toggle:TweenPosition(UDim2.new(0.5, -50, 1, -25),Enum.EasingDirection.Out,Enum.EasingStyle.Quad,.4,false)	
+	for i=1,6 do
+		cPanel.Toggle.BackgroundColor3 = Color3.new(100/255,100/255,100/255)
+		wait(.2)
+		if controlsOpen then
+			cPanel.Toggle.BackgroundColor3 = Color3.new(1,85/255,.5)
+		else
+			cPanel.Toggle.BackgroundColor3 = Color3.new(1,170/255,0)
+		end
+		wait(.2)
+	end
+end
+coroutine.wrap(SKTTISY_fake_script)()
+local function LDUP_fake_script() -- Plugins.AC6_Stock_Sound 
+	local script = Instance.new('LocalScript', Plugins)
+
+	--[[
+			___      _______                _     
+		   / _ |____/ ___/ /  ___ ____ ___ (_)__ 
+		  / __ /___/ /__/ _ \/ _ `(_-<(_-</ (_-<
+		 /_/ |_|   \___/_//_/\_,_/___/___/_/___/
+	 						SecondLogic @ Inspare
+	]]
+	local FE = workspace.FilteringEnabled
+	local car = script.Parent.Car.Value
+	local handler = car:WaitForChild("AC6_FE_Sounds")
+	local _Tune = require(car["A-Chassis Tune"])
+	local on = 0
+	local throt=0
+	local redline=0
+	
+	script:WaitForChild("Rev")
+	
+	
+	for i,v in pairs(car.DriveSeat:GetChildren()) do
+		for _,a in pairs(script:GetChildren()) do
+			if v.Name==a.Name then v:Stop() wait() v:Destroy() end
+		end
+	end
+	
+	handler:FireServer("newSound","Rev",car.DriveSeat,script.Rev.SoundId,0,script.Rev.Volume,true)
+	handler:FireServer("playSound","Rev")
+	car.DriveSeat:WaitForChild("Rev")
+	
+	while wait() do
+		local _RPM = script.Parent.Values.RPM.Value
+		
+		if script.Parent.Values.Throttle.Value <= _Tune.IdleThrottle/100 then
+			throt = math.max(.3,throt-.2)	
+		else
+			throt = math.min(1,throt+.1)	
+		end	
+		if script.Parent.Values.RPM.Value > _Tune.Redline-_Tune.RevBounce/4 and script.Parent.Values.Throttle.Value > _Tune.IdleThrottle/100 then
+			redline=.5
+		else
+			redline=1
+		end
+		if not script.Parent.IsOn.Value then on=math.max(on-.015,0) else on=1 end
+		local Pitch = math.max((((script.Rev.SetPitch.Value + script.Rev.SetRev.Value*_RPM/_Tune.Redline))*on^2),script.Rev.SetPitch.Value)
+		if FE then
+			handler:FireServer("updateSound","Rev",script.Rev.SoundId,Pitch,script.Rev.Volume)
+		else
+			car.DriveSeat.Rev.Pitch = Pitch
+		end
+	end
+	
+end
+coroutine.wrap(LDUP_fake_script)()
+local function ZFTZUK_fake_script() -- Plugins.AC6_MSteer_Camera 
+	local script = Instance.new('LocalScript', Plugins)
+
+	--[[
+			___      _______                _     
+		   / _ |____/ ___/ /  ___ ____ ___ (_)__ 
+		  / __ /___/ /__/ _ \/ _ `(_-<(_-</ (_-<
+		 /_/ |_|   \___/_//_/\_,_/___/___/_/___/
+	 						SecondLogic @ Inspare
+	]]
+	
+	local car = script.Parent.Car.Value
+	local cam = workspace.CurrentCamera
+	local RS = game:GetService("RunService")
+	
+	car.DriveSeat.ChildRemoved:connect(function(child)
+		if child.Name=="SeatWeld" then
+			RS:UnbindFromRenderStep("MCam")
+			cam.CameraType = Enum.CameraType.Custom
+		end
+	end)
+	
+	script.Parent.Values.MouseSteerOn.Changed:connect(function(property)
+		if script.Parent.Values.MouseSteerOn.Value then
+			RS:BindToRenderStep("MCam",Enum.RenderPriority.Camera.Value,function()	
+				cam.CameraType = Enum.CameraType.Scriptable
+				local pspeed = math.min(1,car.DriveSeat.Velocity.Magnitude/500)
+				local cc = car.DriveSeat.Position+Vector3.new(0,8+(pspeed*2),0)-(car.DriveSeat.CFrame.lookVector*17)+(car.DriveSeat.Velocity.Unit*-7*pspeed)
+				cam.CoordinateFrame = CFrame.new(cc,car.DriveSeat.Position)
+			end)
+		else
+			RS:UnbindFromRenderStep("MCam")
+			cam.CameraType = Enum.CameraType.Custom
+		end
+	end)
+end
+coroutine.wrap(ZFTZUK_fake_script)()
+local function OVIGBGH_fake_script() -- SS6DynamicFriction.Simulated 
+	local script = Instance.new('LocalScript', SS6DynamicFriction)
+
+	  				    --//AC6 Ported Plugin [SS6]//--
+					  --//SecondLogic x INSPARE 2017//--
+	
+	
+	--------------------------------------------------------------------------
+	
+	local _WHEELTUNE = {
+																			--[[	
+				SS6 Presets
+		[Eco]		
+			WearSpeed = 1,
+			TargetFriction = .7,
+			MinFriction = .1,
+		[Road]		
+			WearSpeed = 2,
+			TargetFriction = .7,
+			MinFriction = .1,
+		[Sport]		
+			WearSpeed = 3,
+			TargetFriction = .79,
+			MinFriction = .1,											]]
+	
+		TireWearOn 		= true	,
+		
+		--Friction and Wear
+		FWearSpeed		= .4	,
+		FTargetFriction	= .7	,
+		FMinFriction 	= .1	,
+		
+		RWearSpeed		= .4	,
+		RTargetFriction	= .7	,
+		RMinFriction	= .1	,
+		
+		--Tire Slip
+		TCSOffRatio		= 1/3	,
+		WheelLockRatio	= 1/2	,	--SS6 Default = 1/4
+		WheelspinRatio	= 1/1.1	,	--SS6 Default = 1/1.2
+		
+		--Wheel Properties
+		FFrictionWeight	= 1		,	--SS6 Default = 1
+		RFrictionWeight	= 1		,	--SS6 Default = 1
+		FLgcyFrWeight	= 10	,
+		RLgcyFrWeight	= 10	,
+		
+		FElasticity		= .5		,	--SS6 Default = .5
+		RElasticity		= .5		,	--SS6 Default = .5
+		FLgcyElasticity	= 0		,
+		RLgcyElasticity	= 0		,
+		
+		FElastWeight	= 1		,	--SS6 Default = 1
+		RElastWeight	= 1		,	--SS6 Default = 1
+		FLgcyElWeight	= 10	,
+		RLgcyElWeight	= 10	,
+		
+		--Wear Regen
+		RegenSpeed		= 3.6		--SS6 Default = 3.6
+	}
+	
+	--------------------------------------------------------------------------
+	
+	
+	local car = script.Parent.Parent.Car.Value
+	local _Tune = require(car["A-Chassis Tune"])
+	local cValues = script.Parent.Parent:WaitForChild("Values")
+	
+	--Wheels Array
+	local fDensity = _Tune.FWheelDensity
+	local rDensity = _Tune.RWheelDensity
+	local fFwght = _WHEELTUNE.FFrictionWeight
+	local rFwght = _WHEELTUNE.RFrictionWeight
+	local fElast = _WHEELTUNE.FElasticity
+	local rElast = _WHEELTUNE.RElasticity
+	local fEwght = _WHEELTUNE.FElastWeight
+	local rEwght = _WHEELTUNE.RElastWeight
+	if not workspace:PGSIsEnabled() then
+		fDensity = _Tune.FWLgcyDensity
+		rDensity = _Tune.RWLgcyDensity
+		fFwght = _WHEELTUNE.FLgcyFrWeight
+		rFwght = _WHEELTUNE.FLgcyFrWeight
+		fElast = _WHEELTUNE.FLgcyElasticity
+		rElast = _WHEELTUNE.RLgcyElasticity
+		fEwght = _WHEELTUNE.FLgcyElWeight
+		rEwght = _WHEELTUNE.RLgcyElWeight
+	end
+	local Wheels = {}
+	for i,v in pairs(car.Wheels:GetChildren()) do
+		local w = {}
+		w.wheel = v
+		local ca
+		w.x = 0
+		if v.Name == "FL" or v.Name == "FR" or v.Name == "F" then
+			ca = (12-math.abs(_Tune.FCamber))/15
+			w.x = fDensity
+			w.BaseHeat = _WHEELTUNE.FTargetFriction-_WHEELTUNE.FMinFriction
+			w.WearSpeed = _WHEELTUNE.FWearSpeed
+			w.fWeight = fFwght
+			w.elast = fElast
+			w.eWeight = fEwght
+		else
+			ca = (12-math.abs(_Tune.RCamber))/15
+			w.x = rDensity
+			w.BaseHeat = _WHEELTUNE.RTargetFriction-_WHEELTUNE.RMinFriction
+			w.WearSpeed = _WHEELTUNE.RWearSpeed
+			w.fWeight = rFwght
+			w.elast = rElast
+			w.eWeight = rEwght
+		end
+		--if car:FindFirstChild("WearData")~=nil then
+		--	w.Heat = math.min(w.BaseHeat,car.WearData[v.Name].Value+(((tick()-car.WearData.STime.Value)*_WHEELTUNE.RegenSpeed*15/10000)))
+		--else
+			w.Heat = w.BaseHeat
+		--end
+		w.stress = 0
+		table.insert(Wheels,w)
+	end
+	
+	--Close/Store Wear Data
+	car.DriveSeat.ChildRemoved:connect(function(child)
+		if child.Name=="SeatWeld" then
+			local wD=car:FindFirstChild("WearData")
+			if car:FindFirstChild("WearData")==nil then
+				wD = script.Parent.WearData:Clone()
+				wD.Parent=car
+			end
+			for i,v in pairs(Wheels) do
+				wD[v.wheel.Name].Value = v.Heat
+			end
+			wD.STime.Value=tick()
+		end
+	end)
+	
+	--Runtime Loop
+	while wait() do
+		for i,v in pairs(Wheels) do
+			--Vars
+			local speed = car.DriveSeat.Velocity.Magnitude
+			local wheel = v.wheel.RotVelocity.Magnitude
+			local z = 0		
+			local deg = 0.000126
+			
+			--Tire Wear
+			local cspeed = (speed/1.298)*(2.6/v.wheel.Size.Y) 
+			local wdif = math.abs(wheel-cspeed)
+			if _WHEELTUNE.TireWearOn then
+				if speed < 4 then
+					--Wear Regen
+					v.Heat = math.min(v.Heat + _WHEELTUNE.RegenSpeed/10000,v.BaseHeat)
+				else
+					--Tire Wear
+					if wdif > 1 then
+						v.Heat = v.Heat - wdif*deg*v.WearSpeed/28
+					elseif v.Heat >= v.BaseHeat then
+						v.Heat = v.BaseHeat
+					end
+				end
+			end
+			
+			--Apply Friction
+			if v.wheel.Name == "FL" or v.wheel.Name == "FR" or v.wheel.Name == "F" then
+				z = _WHEELTUNE.FMinFriction+v.Heat
+				deg = ((deg - 0.0001188*cValues.Brake.Value)*(1-math.abs(cValues.SteerC.Value))) + 0.00000126*math.abs(cValues.SteerC.Value)
+			else
+				z = _WHEELTUNE.RMinFriction+v.Heat
+			end
+			
+			--Tire Slip
+			if math.ceil((wheel/0.774/speed)*100) < 8 then
+				--Lock Slip
+				v.wheel.CustomPhysicalProperties = PhysicalProperties.new(v.x,z*_WHEELTUNE.WheelLockRatio,v.elast,v.fWeight,v.eWeight)
+				v.Heat = math.max(v.Heat,0)
+			elseif (_Tune.TCSEnabled and cValues.TCS.Value == false and math.ceil((wheel/0.774/speed)*100) > 80) then
+				--TCS Off
+				v.wheel.CustomPhysicalProperties = PhysicalProperties.new(v.x,z*_WHEELTUNE.TCSOffRatio,v.elast,v.fWeight,v.eWeight)
+				v.Heat = math.max(v.Heat,0)
+			elseif math.ceil((wheel/0.774/speed)*100) > 130 then
+				--Wheelspin
+				v.wheel.CustomPhysicalProperties = PhysicalProperties.new(v.x,z*_WHEELTUNE.WheelspinRatio,v.elast,v.fWeight,v.eWeight)		
+				v.Heat = math.max(v.Heat,0)
+			else
+				--No Slip
+				v.wheel.CustomPhysicalProperties = PhysicalProperties.new(v.x,z,v.elast,v.fWeight,v.eWeight)
+				v.Heat = math.min(v.Heat,v.BaseHeat)
+			end 
+			
+			--Update UI
+			local vstress = math.abs(((((wdif+cspeed)/0.774)*0.774)-cspeed)/15)
+			if vstress > 0.05 and vstress > v.stress then 
+				v.stress = math.min(v.stress + 0.03,1)
+			else
+				v.stress = math.max(v.stress - 0.03,vstress)	
+			end
+			local UI = script.Parent.Tires[v.wheel.Name]
+			UI.First.Second.Image.ImageColor3 = Color3.new(math.min((v.stress*2),1), 1-v.stress, 0)
+			UI.First.Position = UDim2.new(0,0,1-v.Heat/v.BaseHeat,0)
+			UI.First.Second.Position = UDim2.new(0,0,v.Heat/v.BaseHeat,0)
+		end
+	end
+end
+coroutine.wrap(OVIGBGH_fake_script)()
+local function WYTF_fake_script() -- AC6_Stock_Gauges.Gauges_AC6 
+	local script = Instance.new('LocalScript', AC6_Stock_Gauges)
+
+	--[[
+			___      _______                _     
+		   / _ |____/ ___/ /  ___ ____ ___ (_)__ 
+		  / __ /___/ /__/ _ \/ _ `(_-<(_-</ (_-<
+		 /_/ |_|   \___/_//_/\_,_/___/___/_/___/
+	 						SecondLogic @ Inspare
+	]]
+	
+	
+	local autoscaling	= false					--Estimates top speed
+	
+	local UNITS	= {								--Click on speed to change units
+												--First unit is default	
+		{
+			units			= "MPH"				,
+			scaling			= (10/12) * (60/88)	, -- 1 stud : 10 inches | ft/s to MPH
+			maxSpeed		= 230				,
+			spInc			= 20				, -- Increment between labelled notches
+		},
+		
+		{
+			units			= "KM/H"			,
+			scaling			= (10/12) * 1.09728	, -- 1 stud : 10 inches | ft/s to KP/H
+			maxSpeed		= 370				,
+			spInc			= 40				, -- Increment between labelled notches
+		},
+		
+		{
+			units			= "SPS"				,
+			scaling			= 1					, -- Roblox standard
+			maxSpeed		= 400				,
+			spInc			= 40				, -- Increment between labelled notches
+		}
+	}
+	
+	-----------------------------------------------------------------------------------------------
+	
+	script.Parent:WaitForChild("Speedo")
+	script.Parent:WaitForChild("Tach")
+	script.Parent:WaitForChild("ln")
+	script.Parent:WaitForChild("Gear")
+	script.Parent:WaitForChild("Speed")
+	
+	local player=game.Players.LocalPlayer
+	local mouse=player:GetMouse()
+	
+	local car = script.Parent.Parent.Car.Value
+	car.DriveSeat.HeadsUpDisplay = false
+	
+	local _Tune = require(car["A-Chassis Tune"])
+	
+	local _pRPM = _Tune.PeakRPM
+	local _lRPM = _Tune.Redline
+	
+	local currentUnits = 1
+	local revEnd = math.ceil(_lRPM/1000)
+	
+	--Automatic Gauge Scaling
+	if autoscaling then
+		local Drive={}
+		if _Tune.Config == "FWD" or _Tune.Config == "AWD" then
+			if car.Wheels:FindFirstChild("FL")~= nil then
+				table.insert(Drive,car.Wheels.FL)
+			end
+			if car.Wheels:FindFirstChild("FR")~= nil then
+				table.insert(Drive,car.Wheels.FR)
+			end
+			if car.Wheels:FindFirstChild("F")~= nil then
+				table.insert(Drive,car.Wheels.F)
+			end
+		end
+		if _Tune.Config == "RWD" or _Tune.Config == "AWD" then
+			if car.Wheels:FindFirstChild("RL")~= nil then
+				table.insert(Drive,car.Wheels.RL)
+			end
+			if car.Wheels:FindFirstChild("RR")~= nil then
+				table.insert(Drive,car.Wheels.RR)
+			end
+			if car.Wheels:FindFirstChild("R")~= nil then
+				table.insert(Drive,car.Wheels.R)
+			end
+		end
+	
+		local wDia = 0
+		for i,v in pairs(Drive) do
+			if v.Size.x>wDia then wDia = v.Size.x end
+		end
+		Drive = nil
+		for i,v in pairs(UNITS) do
+			v.maxSpeed = math.ceil(v.scaling*wDia*math.pi*_lRPM/60/_Tune.Ratios[#_Tune.Ratios]/_Tune.FinalDrive)
+			v.spInc = math.max(math.ceil(v.maxSpeed/200)*20,20)
+		end
+	end
+	
+	for i=0,revEnd*2 do
+		local ln = script.Parent.ln:clone()
+		ln.Parent = script.Parent.Tach
+		ln.Rotation = 45 + i * 225 / (revEnd*2)
+		ln.Num.Text = i/2
+		ln.Num.Rotation = -ln.Rotation
+		if i*500>=math.floor(_pRPM/500)*500 then
+			ln.Frame.BackgroundColor3 = Color3.new(1,0,0)
+			if i<revEnd*2 then
+				ln2 = ln:clone()
+				ln2.Parent = script.Parent.Tach
+				ln2.Rotation = 45 + (i+.5) * 225 / (revEnd*2)
+				ln2.Num:Destroy()
+				ln2.Visible=true
+			end
+		end
+		if i%2==0 then
+			ln.Frame.Size = UDim2.new(0,3,0,10)
+			ln.Frame.Position = UDim2.new(0,-1,0,100)
+			ln.Num.Visible = true
+		else
+			ln.Num:Destroy()
+		end
+		ln.Visible=true
+	end
+	
+	local lns = Instance.new("Frame",script.Parent.Speedo)
+	lns.Name = "lns"
+	lns.BackgroundTransparency = 1
+	lns.BorderSizePixel = 0
+	lns.Size = UDim2.new(0,0,0,0)
+	for i=1,90 do
+		local ln = script.Parent.ln:clone()
+		ln.Parent = lns
+		ln.Rotation = 45 + 225*(i/90)
+		if i%2==0 then
+			ln.Frame.Size = UDim2.new(0,2,0,10)
+			ln.Frame.Position = UDim2.new(0,-1,0,100)
+		else
+			ln.Frame.Size = UDim2.new(0,3,0,5)
+		end
+		ln.Num:Destroy()
+		ln.Visible=true
+	end
+	
+	for i,v in pairs(UNITS) do
+		local lnn = Instance.new("Frame",script.Parent.Speedo)
+		lnn.BackgroundTransparency = 1
+		lnn.BorderSizePixel = 0
+		lnn.Size = UDim2.new(0,0,0,0)
+		lnn.Name = v.units
+		if i~= 1 then lnn.Visible=false end
+		
+		for i=0,v.maxSpeed,v.spInc do
+			local ln = script.Parent.ln:clone()
+			ln.Parent = lnn
+			ln.Rotation = 45 + 225*(i/v.maxSpeed)
+			ln.Num.Text = i
+			ln.Num.TextSize = 14
+			ln.Num.Rotation = -ln.Rotation
+			ln.Frame:Destroy()
+			ln.Num.Visible=true
+			ln.Visible=true
+		end
+	end
+	
+	if 	script.Parent.Parent.IsOn.Value then
+		script.Parent:TweenPosition(UDim2.new(0, 0, 0, 0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,1,true)
+	end
+	
+	script.Parent.Parent.IsOn.Changed:connect(function()
+		if script.Parent.Parent.IsOn.Value then
+			script.Parent:TweenPosition(UDim2.new(0, 0, 0, 0),Enum.EasingDirection.InOut,Enum.EasingStyle.Quad,1,true)
+		end
+	end)
+	
+	script.Parent.Parent.Values.RPM.Changed:connect(function()
+		script.Parent.Tach.Needle.Rotation = 45 + 225 * math.min(1,script.Parent.Parent.Values.RPM.Value / (revEnd*1000))
+	end)
+	
+	script.Parent.Parent.Values.Gear.Changed:connect(function()
+		local gearText = script.Parent.Parent.Values.Gear.Value
+		if gearText == 0 then gearText = "N"
+		elseif gearText == -1 then gearText = "R"
+		end
+		script.Parent.Gear.Text = gearText
+	end)
+	
+	script.Parent.Parent.Values.TCS.Changed:connect(function()
+		if _Tune.TCSEnabled then
+			if script.Parent.Parent.Values.TCS.Value then
+				script.Parent.TCS.TextColor3 = Color3.new(1,170/255,0)
+				script.Parent.TCS.TextStrokeColor3 = Color3.new(1,170/255,0)
+				if script.Parent.Parent.Values.TCSActive.Value then
+					wait()
+					script.Parent.TCS.Visible = not script.Parent.TCS.Visible
+				else
+					wait()
+					script.Parent.TCS.Visible = false
+				end
+			else
+				script.Parent.TCS.Visible = true
+				script.Parent.TCS.TextColor3 = Color3.new(1,0,0)
+				script.Parent.TCS.TextStrokeColor3 = Color3.new(1,0,0)
+			end
+		else
+			script.Parent.TCS.Visible = false
+		end
+	end)
+	
+	script.Parent.Parent.Values.TCSActive.Changed:connect(function()
+		if _Tune.TCSEnabled then
+			if script.Parent.Parent.Values.TCSActive.Value and script.Parent.Parent.Values.TCS.Value then
+				wait()
+				script.Parent.TCS.Visible = not script.Parent.TCS.Visible
+			elseif not script.Parent.Parent.Values.TCS.Value then
+				wait()
+				script.Parent.TCS.Visible = true
+			else
+				wait()
+				script.Parent.TCS.Visible = false
+			end
+		else
+			script.Parent.TCS.Visible = false
+		end
+	end)
+	
+	script.Parent.TCS.Changed:connect(function()
+		if _Tune.TCSEnabled then
+			if script.Parent.Parent.Values.TCSActive.Value and script.Parent.Parent.Values.TCS.Value then
+				wait()
+				script.Parent.TCS.Visible = not script.Parent.TCS.Visible
+			elseif not script.Parent.Parent.Values.TCS.Value then
+				wait()
+				script.Parent.TCS.Visible = true
+			end
+		else
+			if script.Parent.TCS.Visible then
+				script.Parent.TCS.Visible = false
+			end
+		end
+	end)
+	
+	script.Parent.Parent.Values.ABS.Changed:connect(function()
+		if _Tune.ABSEnabled then
+			if script.Parent.Parent.Values.ABS.Value then
+				script.Parent.ABS.TextColor3 = Color3.new(1,170/255,0)
+				script.Parent.ABS.TextStrokeColor3 = Color3.new(1,170/255,0)
+				if script.Parent.Parent.Values.ABSActive.Value then
+					wait()
+					script.Parent.ABS.Visible = not script.Parent.ABS.Visible
+				else
+					wait()
+					script.Parent.ABS.Visible = false
+				end
+			else
+				script.Parent.ABS.Visible = true
+				script.Parent.ABS.TextColor3 = Color3.new(1,0,0)
+				script.Parent.ABS.TextStrokeColor3 = Color3.new(1,0,0)
+			end
+		else
+			script.Parent.ABS.Visible = false
+		end
+	end)
+	
+	script.Parent.Parent.Values.ABSActive.Changed:connect(function()
+		if _Tune.ABSEnabled then
+			if script.Parent.Parent.Values.ABSActive.Value and script.Parent.Parent.Values.ABS.Value then
+				wait()
+				script.Parent.ABS.Visible = not script.Parent.ABS.Visible
+			elseif not script.Parent.Parent.Values.ABS.Value then
+				wait()
+				script.Parent.ABS.Visible = true
+			else
+				wait()
+				script.Parent.ABS.Visible = false
+			end
+		else
+			script.Parent.ABS.Visible = false
+		end
+	end)
+	
+	script.Parent.ABS.Changed:connect(function()
+		if _Tune.ABSEnabled then
+			if script.Parent.Parent.Values.ABSActive.Value and script.Parent.Parent.Values.ABS.Value then
+				wait()
+				script.Parent.ABS.Visible = not script.Parent.ABS.Visible
+			elseif not script.Parent.Parent.Values.ABS.Value then
+				wait()
+				script.Parent.ABS.Visible = true
+			end
+		else
+			if script.Parent.ABS.Visible then
+				script.Parent.ABS.Visible = false
+			end
+		end
+	end)
+	
+	
+	function PBrake()
+		script.Parent.PBrake.Visible = script.Parent.Parent.Values.PBrake.Value
+	end
+	script.Parent.Parent.Values.PBrake.Changed:connect(PBrake)
+	
+	function Gear()
+		if script.Parent.Parent.Values.TransmissionMode.Value == "Auto" then
+			script.Parent.TMode.Text = "A/T"
+			script.Parent.TMode.BackgroundColor3 = Color3.new(1,170/255,0)
+		elseif script.Parent.Parent.Values.TransmissionMode.Value == "Semi" then
+			script.Parent.TMode.Text = "S/T"
+			script.Parent.TMode.BackgroundColor3 = Color3.new(0, 170/255, 127/255) 
+		else
+			script.Parent.TMode.Text = "M/T"
+			script.Parent.TMode.BackgroundColor3 = Color3.new(1,85/255,.5)
+		end
+	end
+	script.Parent.Parent.Values.TransmissionMode.Changed:connect(Gear)
+	
+	script.Parent.Parent.Values.Velocity.Changed:connect(function(property)
+		script.Parent.Speedo.Needle.Rotation =45 + 225 * math.min(1,UNITS[currentUnits].scaling*script.Parent.Parent.Values.Velocity.Value.Magnitude/UNITS[currentUnits].maxSpeed)
+		script.Parent.Speed.Text = math.floor(UNITS[currentUnits].scaling*script.Parent.Parent.Values.Velocity.Value.Magnitude) .. " "..UNITS[currentUnits].units
+	end)
+	
+	script.Parent.Speed.MouseButton1Click:connect(function()
+		if currentUnits==#UNITS then
+			currentUnits = 1
+		else
+			currentUnits = currentUnits+1
+		end
+		for i,v in pairs(script.Parent.Speedo:GetChildren()) do
+			v.Visible=v.Name==UNITS[currentUnits].units or v.Name=="Needle" or v.Name=="lns"
+		end
+		script.Parent.Speed.Text = math.floor(UNITS[currentUnits].scaling*script.Parent.Parent.Values.Velocity.Value.Magnitude) .. " "..UNITS[currentUnits].units
+	end)
+	
+	wait(.1)
+	Gear()
+	PBrake()
+	
+end
+coroutine.wrap(WYTF_fake_script)()
+local function CMAX_fake_script() -- Plugins.Backfire [FE+] 
+	local script = Instance.new('LocalScript', Plugins)
+
+	local FE = workspace.FilteringEnabled
+	local car = script.Parent.Car.Value
+	local handler = car:WaitForChild("Backfire_FE")
+	local _Tune = require(car["A-Chassis Tune"])
+	
+	script.Parent.Values.Gear.Changed:connect(function()
+		if script.Parent.Values.RPM.Value>6000 then
+			if FE then
+				handler:FireServer("Backfire1")
+				wait (0.1)
+			else
+				car.Body.Exhaust.Backfire1.Backfire1:play()
+				car.Body.Exhaust.Backfire2.Backfire1:play()
+				car.Body.Exhaust.Backfire1.Fire.Enabled = true
+				car.Body.Exhaust.Backfire2.Fire.Enabled = true
+				car.Body.Exhaust.BFLight1.SpotLight.Enabled = true
+				car.Body.Exhaust.BFLight2.SpotLight.Enabled = true
+				wait (0.03)
+				car.Body.Exhaust.Backfire1.Fire.Enabled = false
+				car.Body.Exhaust.Backfire2.Fire.Enabled = false
+				car.Body.Exhaust.BFLight1.SpotLight.Enabled = false
+				car.Body.Exhaust.BFLight2.SpotLight.Enabled = false
+				wait (0.07)
+			end
+		end
+	end)
+	
+	while wait() do
+		--//Backfire//--
+		local randomability = math.random (1, 10)
+		
+		local throtOff = script.Parent.Values.RPM.Value > 7500 and randomability <=1 and script.Parent.Values.Throttle.Value <= _Tune.IdleThrottle/100
+		local redline = script.Parent.Values.Throttle.Value > 0 and math.ceil(script.Parent.Values.RPM.Value) > _Tune.Redline-_Tune.RevBounce and script.Parent.Values.Gear.Value<#_Tune.Ratios-2
+		
+		if throtOff or redline then
+			if FE then
+				handler:FireServer("Backfire2")
+				wait (0.1)
+			else
+				car.Body.Exhaust.Backfire1.Backfire2:play()
+				car.Body.Exhaust.Backfire2.Backfire2:play()
+				car.Body.Exhaust.Backfire1.Fire.Enabled = true
+				car.Body.Exhaust.Backfire2.Fire.Enabled = true
+				car.Body.Exhaust.BFLight1.SpotLight.Enabled = true
+				car.Body.Exhaust.BFLight2.SpotLight.Enabled = true
+				wait (0.03)
+				car.Body.Exhaust.Backfire1.Fire.Enabled = false
+				car.Body.Exhaust.Backfire2.Fire.Enabled = false
+				car.Body.Exhaust.BFLight1.SpotLight.Enabled = false
+				car.Body.Exhaust.BFLight2.SpotLight.Enabled = false
+				wait (0.07)
+			end
+		end
+	--//--//--
+	end
+	
+end
+coroutine.wrap(CMAX_fake_script)()
+local function GXYXAX_fake_script() -- Plugins.Smoke [FE+] 
+	local script = Instance.new('LocalScript', Plugins)
+
+	local FE = workspace.FilteringEnabled
+	local car = script.Parent.Car.Value
+	car.Wheels.RL.SQ:Play()
+	car.Wheels.RR.SQ:Play()
+	local handler = car:WaitForChild("Smoke_FE")
+	
+	while wait(.2) do
+		local r1 = Ray.new(car.Wheels.RL.Position,(car.Wheels.RL.Arm.CFrame*CFrame.Angles(-math.pi/2,0,0)).lookVector*(.05+car.Wheels.RL.Size.x/2))
+		local r1hit = 0
+		if workspace:FindPartOnRay(r1,car)~=nil then r1hit=1 end
+	
+		local r2 = Ray.new(car.Wheels.RL.Position,(car.Wheels.RR.Arm.CFrame*CFrame.Angles(-math.pi/2,0,0)).lookVector*(.05+car.Wheels.RR.Size.x/2))
+		local r2hit = 0
+		if workspace:FindPartOnRay(r2,car)~=nil then r2hit=1 end
+		
+		local rl = math.min((math.max(math.abs((car.Wheels.RL.RotVelocity.Magnitude*car.Wheels.RL.Size.x/2) - (car.Wheels.RL.Velocity.Magnitude))-30,0)),50)*r1hit
+		local rr = math.min((math.max(math.abs((car.Wheels.RR.RotVelocity.Magnitude*car.Wheels.RR.Size.x/2) - (car.Wheels.RR.Velocity.Magnitude))-30,0)),50)*r2hit
+		
+		if FE then
+			handler:FireServer("UpdateSmoke",rl,rr)
+		else
+			car.Wheels.RL.Smoke.Rate = rl
+			car.Wheels.RR.Smoke.Rate = rr
+			car.Wheels.RL.SQ.Volume = rl/50
+			car.Wheels.RR.SQ.Volume = rr/50
+		end
+	end
+	
+end
+coroutine.wrap(GXYXAX_fake_script)()
+local function RCUIY_fake_script() -- nil.Initialize 
+	local script = Instance.new('Script', nil)
+
+	--[[
+			___      _______                _     
+		   / _ |____/ ___/ /  ___ ____ ___ (_)__ 
+		  / __ /___/ /__/ _ \/ _ `(_-<(_-</ (_-<
+		 /_/ |_|   \___/_//_/\_,_/___/___/_/___/
+	 						SecondLogic @ Inspare
+	]]
+	
+	--[[START]]
+	
+		_BuildVersion = require(script.Parent.README)
+	
+	--[[Weld functions]]
+	
+		local JS = game:GetService("JointsService")
+		local PGS_ON = workspace:PGSIsEnabled()
+		
+		function MakeWeld(x,y,type,s) 
+			if type==nil then type="Weld" end
+			local W=Instance.new(type,JS) 
+			W.Part0=x W.Part1=y 
+			W.C0=x.CFrame:inverse()*x.CFrame 
+			W.C1=y.CFrame:inverse()*x.CFrame 
+			if type=="Motor" and s~=nil then 
+				W.MaxVelocity=s 
+			end 
+			return W	
+		end
+		
+		function ModelWeld(a,b) 
+			if a:IsA("BasePart") then 
+				MakeWeld(b,a,"Weld") 
+			elseif a:IsA("Model") then 
+				for i,v in pairs(a:GetChildren()) do 
+					ModelWeld(v,b) 
+				end 
+			end 
+		end
+		
+		function UnAnchor(a) 
+			if a:IsA("BasePart") then a.Anchored=false  end for i,v in pairs(a:GetChildren()) do UnAnchor(v) end 
+		end
+	
+	
+		
+	--[[Initialize]]
+	
+		script.Parent:WaitForChild("A-Chassis Interface")
+		script.Parent:WaitForChild("Plugins")
+		script.Parent:WaitForChild("README")
+		
+		local car=script.Parent.Parent
+		local _Tune=require(script.Parent)
+		
+		wait(_Tune.LoadDelay)
+		
+		--Weight Scaling
+		local weightScaling = _Tune.WeightScaling
+		if not workspace:PGSIsEnabled() then
+			weightScaling = _Tune.LegacyScaling
+		end
+	
+		local Drive=car.Wheels:GetChildren()
+		
+		--Remove Existing Mass
+		function DReduce(p)
+			for i,v in pairs(p:GetChildren())do
+				if v:IsA("BasePart") then
+					if v.CustomPhysicalProperties == nil then v.CustomPhysicalProperties = PhysicalProperties.new(v.Material) end
+					v.CustomPhysicalProperties = PhysicalProperties.new(
+						0,
+						v.CustomPhysicalProperties.Friction,
+						v.CustomPhysicalProperties.Elasticity,
+						v.CustomPhysicalProperties.FrictionWeight,
+						v.CustomPhysicalProperties.ElasticityWeight
+					)
+				end
+				DReduce(v)
+			end
+		end
+		DReduce(car)
+	
+	
+	
+	--[[Wheel Configuration]]	
+		
+		--Store Reference Orientation Function
+		function getParts(model,t,a)
+			for i,v in pairs(model:GetChildren()) do
+				if v:IsA("BasePart") then table.insert(t,{v,a.CFrame:toObjectSpace(v.CFrame)})
+				elseif v:IsA("Model") then getParts(v,t,a)
+				end
+			end
+		end
+		
+		--PGS/Legacy
+		local fDensity = _Tune.FWheelDensity
+		local rDensity = _Tune.RWheelDensity
+		if not PGS_ON then
+			fDensity = _Tune.FWLgcyDensity
+			rDensity = _Tune.RWLgcyDensity
+		end
+		
+		local fDistX=_Tune.FWsBoneLen*math.cos(math.rad(_Tune.FWsBoneAngle))
+		local fDistY=_Tune.FWsBoneLen*math.sin(math.rad(_Tune.FWsBoneAngle))
+		local rDistX=_Tune.RWsBoneLen*math.cos(math.rad(_Tune.RWsBoneAngle))
+		local rDistY=_Tune.RWsBoneLen*math.sin(math.rad(_Tune.RWsBoneAngle))
+		
+		local fSLX=_Tune.FSusLength*math.cos(math.rad(_Tune.FSusAngle))
+		local fSLY=_Tune.FSusLength*math.sin(math.rad(_Tune.FSusAngle))
+		local rSLX=_Tune.RSusLength*math.cos(math.rad(_Tune.RSusAngle))
+		local rSLY=_Tune.RSusLength*math.sin(math.rad(_Tune.RSusAngle))
+		
+		for _,v in pairs(Drive) do
+			--Apply Wheel Density
+			if v.Name=="FL" or v.Name=="FR" or v.Name=="F" then
+				if v:IsA("BasePart") then
+					if v.CustomPhysicalProperties == nil then v.CustomPhysicalProperties = PhysicalProperties.new(v.Material) end
+					v.CustomPhysicalProperties = PhysicalProperties.new(
+						fDensity,
+						v.CustomPhysicalProperties.Friction,
+						v.CustomPhysicalProperties.Elasticity,
+						v.CustomPhysicalProperties.FrictionWeight,
+						v.CustomPhysicalProperties.ElasticityWeight
+					)
+				end
+			else
+				if v:IsA("BasePart") then
+					if v.CustomPhysicalProperties == nil then v.CustomPhysicalProperties = PhysicalProperties.new(v.Material) end
+					v.CustomPhysicalProperties = PhysicalProperties.new(
+						rDensity,
+						v.CustomPhysicalProperties.Friction,
+						v.CustomPhysicalProperties.Elasticity,
+						v.CustomPhysicalProperties.FrictionWeight,
+						v.CustomPhysicalProperties.ElasticityWeight
+					)
+				end		
+			end
+			
+			--Resurface Wheels
+			for _,a in pairs({"Top","Bottom","Left","Right","Front","Back"}) do
+				v[a.."Surface"]=Enum.SurfaceType.SmoothNoOutlines
+			end
+			
+			--Store Axle-Anchored/Suspension-Anchored Part Orientation
+			local WParts = {}
+			
+			local tPos = v.Position-car.DriveSeat.Position
+			if v.Name=="FL" or v.Name=="RL" then
+				v.CFrame = car.DriveSeat.CFrame*CFrame.Angles(math.rad(90),0,math.rad(90))
+			else
+				v.CFrame = car.DriveSeat.CFrame*CFrame.Angles(math.rad(90),0,math.rad(-90))
+			end
+			v.CFrame = v.CFrame+tPos
+			
+			if v:FindFirstChild("Parts")~=nil then
+				getParts(v.Parts,WParts,v)
+			end
+			if v:FindFirstChild("Fixed")~=nil then
+				getParts(v.Fixed,WParts,v)
+			end
+			
+			--Align Wheels
+			if v.Name=="FL" or v.Name=="FR" then
+				v.CFrame = v.CFrame*CFrame.Angles(math.rad(_Tune.FCamber),0,0)
+				if v.Name=="FL" then
+					v.CFrame = v.CFrame*CFrame.Angles(0,0,math.rad(_Tune.FToe))
+				else
+					v.CFrame = v.CFrame*CFrame.Angles(0,0,math.rad(-_Tune.FToe))
+				end
+			elseif v.Name=="RL" or v.Name=="RR" then
+				v.CFrame = v.CFrame*CFrame.Angles(math.rad(_Tune.RCamber),0,0)
+				if v.Name=="RL" then
+					v.CFrame = v.CFrame*CFrame.Angles(0,0,math.rad(_Tune.RToe))
+				else
+					v.CFrame = v.CFrame*CFrame.Angles(0,0,math.rad(-_Tune.RToe))
+				end
+			end
+			
+			--Re-orient Axle-Anchored/Suspension-Anchored Parts
+			for _,a in pairs(WParts) do
+				a[1].CFrame=v.CFrame:toWorldSpace(a[2])
+			end
+	
+	
+	
+	--[[Chassis Assembly]]
+			--Create Steering Axle
+			local arm=Instance.new("Part",v)
+			arm.Name="Arm"
+			arm.Anchored=true
+			arm.CanCollide=false
+			arm.FormFactor=Enum.FormFactor.Custom
+			arm.Size=Vector3.new(_Tune.AxleSize,_Tune.AxleSize,_Tune.AxleSize)
+			arm.CFrame=(v.CFrame*CFrame.new(0,_Tune.StAxisOffset,0))*CFrame.Angles(-math.pi/2,-math.pi/2,0)
+			arm.CustomPhysicalProperties = PhysicalProperties.new(_Tune.AxleDensity,0,0,100,100)
+			arm.TopSurface=Enum.SurfaceType.Smooth
+			arm.BottomSurface=Enum.SurfaceType.Smooth
+			arm.Transparency=1
+				
+			--Create Wheel Spindle
+			local base=arm:Clone()
+			base.Parent=v
+			base.Name="Base"
+			base.CFrame=base.CFrame*CFrame.new(0,_Tune.AxleSize,0)
+			base.BottomSurface=Enum.SurfaceType.Hinge
+			
+			--Create Steering Anchor
+			local axle=arm:Clone()
+			axle.Parent=v
+			axle.Name="Axle"
+			axle.CFrame=CFrame.new(v.Position-((v.CFrame*CFrame.Angles(math.pi/2,0,0)).lookVector*((v.Size.x/2)+(axle.Size.x/2))),v.Position)*CFrame.Angles(0,math.pi,0)
+			axle.BackSurface=Enum.SurfaceType.Hinge
+			
+			if v.Name=="F" or v.Name=="R" then
+				local axle2=arm:Clone()
+				axle2.Parent=v
+				axle2.Name="Axle"
+				axle2.CFrame=CFrame.new(v.Position+((v.CFrame*CFrame.Angles(math.pi/2,0,0)).lookVector*((v.Size.x/2)+(axle2.Size.x/2))),v.Position)*CFrame.Angles(0,math.pi,0)
+				axle2.BackSurface=Enum.SurfaceType.Hinge
+				MakeWeld(arm,axle2)
+			end
+			
+			--Create Suspension
+			if PGS_ON and _Tune.SusEnabled then			
+				local sa=arm:Clone()
+				sa.Parent=v
+				sa.Name="#SA"
+				if v.Name == "FL" or v.Name=="FR" or v.Name =="F" then
+					local aOff = _Tune.FAnchorOffset
+					sa.CFrame=v.CFrame*CFrame.new(_Tune.AxleSize/2,-fDistX,-fDistY)*CFrame.new(aOff[3],aOff[1],-aOff[2])*CFrame.Angles(-math.pi/2,-math.pi/2,0)
+				else
+					local aOff = _Tune.RAnchorOffset
+					sa.CFrame=v.CFrame*CFrame.new(_Tune.AxleSize/2,-rDistX,-rDistY)*CFrame.new(aOff[3],aOff[1],-aOff[2])*CFrame.Angles(-math.pi/2,-math.pi/2,0)
+				end
+				
+				local sb=sa:Clone()
+				sb.Parent=v
+				sb.Name="#SB"
+				sb.CFrame=sa.CFrame*CFrame.new(0,0,_Tune.AxleSize)
+				
+				sb.FrontSurface=Enum.SurfaceType.Hinge	
+				
+				local g = Instance.new("BodyGyro",sb)
+				g.Name = "Stabilizer"
+				g.MaxTorque = Vector3.new(0,0,1)
+				g.P = 0
+				
+				local sf1 = Instance.new("Attachment",sa)
+				sf1.Name = "SAtt"
+				
+				local sf2 = sf1:Clone()
+				sf2.Parent = sb
+				
+				
+				if v.Name == "FL" or v.Name == "FR" or v.Name == "F" then
+					sf1.Position = Vector3.new(fDistX-fSLX,-fDistY+fSLY,_Tune.AxleSize/2)
+					sf2.Position = Vector3.new(fDistX,-fDistY,-_Tune.AxleSize/2)
+				elseif v.Name == "RL" or v.Name=="RR" or v.Name == "R" then
+					sf1.Position = Vector3.new(rDistX-rSLX,-rDistY+rSLY,_Tune.AxleSize/2)
+					sf2.Position = Vector3.new(rDistX,-rDistY,-_Tune.AxleSize/2)
+				end
+				
+				sb:MakeJoints()
+				
+				local sp = Instance.new("SpringConstraint",v)
+				sp.Name = "Spring"
+				sp.Attachment0 = sf1
+				sp.Attachment1 = sf2
+				sp.LimitsEnabled = true
+				
+				sp.Visible=_Tune.SusVisible
+				sp.Radius=_Tune.SusRadius
+				sp.Thickness=_Tune.SusThickness
+				sp.Color=BrickColor.new(_Tune.SusColor)
+				sp.Coils=_Tune.SusCoilCount
+				
+				if v.Name == "FL" or v.Name=="FR" or v.Name =="F" then
+					g.D = _Tune.FAntiRoll
+					sp.Damping = _Tune.FSusDamping
+					sp.Stiffness = _Tune.FSusStiffness
+					sp.FreeLength = _Tune.FSusLength+_Tune.FPreCompress
+					sp.MaxLength = _Tune.FSusLength+_Tune.FExtensionLim
+					sp.MinLength = _Tune.FSusLength-_Tune.FCompressLim
+				else
+					g.D = _Tune.RAntiRoll
+					sp.Damping = _Tune.RSusDamping
+					sp.Stiffness = _Tune.RSusStiffness
+					sp.FreeLength = _Tune.RSusLength+_Tune.RPreCompress
+					sp.MaxLength = _Tune.RSusLength+_Tune.RExtensionLim
+					sp.MinLength = _Tune.RSusLength-_Tune.RCompressLim
+				end
+				
+				MakeWeld(car.DriveSeat,sa)
+				MakeWeld(sb,base)
+			else
+				MakeWeld(car.DriveSeat,base)
+			end
+			
+			--Lock Rear Steering Axle
+			if v.Name == "RL" or v.Name == "RR" or v.Name=="R" then
+				MakeWeld(base,axle)
+			end
+			
+			--Weld Assembly
+			if v.Parent.Name == "RL" or v.Parent.Name == "RR" or v.Name=="R" then
+				MakeWeld(car.DriveSeat,arm)
+			end
+			
+			MakeWeld(arm,axle)
+			
+			arm:MakeJoints()
+			axle:MakeJoints()
+		
+			--Weld Miscelaneous Parts
+			if v:FindFirstChild("SuspensionFixed")~=nil then
+				ModelWeld(v.SuspensionFixed,car.DriveSeat)
+			end
+			if v:FindFirstChild("WheelFixed")~=nil then
+				ModelWeld(v.WheelFixed,axle)
+			end
+			if v:FindFirstChild("Fixed")~=nil then
+				ModelWeld(v.Fixed,arm)
+			end
+			
+			--Weld Wheel Parts
+			if v:FindFirstChild("Parts")~=nil then
+				ModelWeld(v.Parts,v)
+			end
+			
+			--Add Steering Gyro
+			if v:FindFirstChild("Steer") then
+				v:FindFirstChild("Steer"):Destroy()
+			end
+			
+			if v.Name=="FL" or v.Name=="FR" or v.Name=="F" then
+				local steer=Instance.new("BodyGyro",arm)
+				steer.Name="Steer"
+				steer.P=_Tune.SteerP
+				steer.D=_Tune.SteerD
+				steer.MaxTorque=Vector3.new(0,_Tune.SteerMaxTorque,0)
+				steer.cframe=v.CFrame*CFrame.Angles(0,-math.pi/2,0)
+			end
+			
+			--Add Stabilization Gyro
+			local gyro=Instance.new("BodyGyro",v)
+			gyro.Name="Stabilizer"
+			gyro.MaxTorque=Vector3.new(1,0,1)
+			gyro.P=0
+			if v.Name=="FL" or v.Name=="FR"  or v.Name=="F" then
+				gyro.D=_Tune.FGyroDamp
+			else
+				gyro.D=_Tune.RGyroDamp
+			end
+			
+			--Add Rotational BodyMover
+			local AV=Instance.new("BodyAngularVelocity",v)
+			AV.Name="#AV"
+			AV.angularvelocity=Vector3.new(0,0,0)
+			AV.maxTorque=Vector3.new(_Tune.PBrakeForce,0,_Tune.PBrakeForce)
+			AV.P=1e9
+		end
+	
+	
+	
+	--[[Vehicle Weight]]	
+		--Determine Current Mass
+		local mass=0
+		
+		function getMass(p)
+			for i,v in pairs(p:GetChildren())do
+				if v:IsA("BasePart") then
+					mass=mass+v:GetMass()
+				end
+				getMass(v)
+			end	
+		end
+		getMass(car)
+		
+		--Apply Vehicle Weight
+		if mass<_Tune.Weight*weightScaling then
+			--Calculate Weight Distribution
+			local centerF = Vector3.new()
+			local centerR = Vector3.new()
+			local countF = 0
+			local countR = 0
+			
+			for i,v in pairs(Drive) do
+				if v.Name=="FL" or v.Name=="FR" or v.Name=="F" then
+					centerF = centerF+v.CFrame.p
+					countF = countF+1
+				else
+					centerR = centerR+v.CFrame.p
+					countR = countR+1
+				end
+			end
+			centerF = centerF/countF
+			centerR = centerR/countR
+			local center = centerR:Lerp(centerF, _Tune.WeightDist/100)  
+			
+			--Create Weight Brick
+			local weightB = Instance.new("Part",car.Body)
+			weightB.Name = "#Weight"
+			weightB.Anchored = true
+			weightB.CanCollide = false
+			weightB.BrickColor = BrickColor.new("Really black")
+			weightB.TopSurface = Enum.SurfaceType.Smooth
+			weightB.BottomSurface = Enum.SurfaceType.Smooth
+			if _Tune.WBVisible then
+				weightB.Transparency = .75			
+			else
+				weightB.Transparency = 1			
+			end
+			weightB.Size = Vector3.new(_Tune.WeightBSize[1],_Tune.WeightBSize[2],_Tune.WeightBSize[3])
+			weightB.CustomPhysicalProperties = PhysicalProperties.new(((_Tune.Weight*weightScaling)-mass)/(weightB.Size.x*weightB.Size.y*weightB.Size.z),0,0,0,0)
+			weightB.CFrame=(car.DriveSeat.CFrame-car.DriveSeat.Position+center)*CFrame.new(0,_Tune.CGHeight,0)
+		else
+			--Existing Weight Is Too Massive
+			warn( "\n\t [AC".._BuildVersion.."]: Mass too high for specified weight."
+				.."\n\t    Target Mass:\t"..(math.ceil(_Tune.Weight*weightScaling*100)/100)
+				.."\n\t    Current Mass:\t"..(math.ceil(mass*100)/100)
+				.."\n\t Reduce part size or axle density to achieve desired weight.")
+		end
+		
+		local flipG = Instance.new("BodyGyro",car.DriveSeat)
+		flipG.Name = "Flip"
+		flipG.D = 0
+		flipG.MaxTorque = Vector3.new(0,0,0)
+		flipG.P = 0
+	
+	
+		
+	--[[Finalize Chassis]]	
+		--Misc Weld
+		wait()
+		for i,v in pairs(script:GetChildren()) do
+			if v:IsA("ModuleScript") then
+				require(v)
+			end
+		end
+		
+		--Weld Body
+		wait()
+		ModelWeld(car.Body,car.DriveSeat)
+		
+		--Unanchor
+		wait()	
+		UnAnchor(car)
+	
+	--[[Manage Plugins]]
+		
+		script.Parent["A-Chassis Interface"].Car.Value=car
+		for i,v in pairs(script.Parent.Plugins:GetChildren()) do
+			for _,a in pairs(v:GetChildren()) do
+				if a:IsA("RemoteEvent") or a:IsA("RemoteFunction") then 
+					a.Parent=car
+					for _,b in pairs(a:GetChildren()) do
+						if b:IsA("Script") then b.Disabled=false end
+					end	
+				end
+			end
+			v.Parent = script.Parent["A-Chassis Interface"]
+		end
+		script.Parent.Plugins:Destroy()
+	
+	
+	
+	--[[Remove Character Weight]]
+		--Get Seats
+		local Seats = {}
+		function getSeats(p)
+			for i,v in pairs(p:GetChildren()) do
+				if v:IsA("VehicleSeat") or v:IsA("Seat") then
+					local seat = {}
+					seat.Seat = v
+					seat.Parts = {}
+					table.insert(Seats,seat)
+				end
+				getSeats(v)
+			end	
+		end
+		getSeats(car)
+		
+		--Store Physical Properties/Remove Mass Function
+		function getPProperties(mod,t)
+			for i,v in pairs(mod:GetChildren()) do
+				if v:IsA("BasePart") then
+					if v.CustomPhysicalProperties == nil then v.CustomPhysicalProperties = PhysicalProperties.new(v.Material) end
+					table.insert(t,{v,v.CustomPhysicalProperties})
+					v.CustomPhysicalProperties = PhysicalProperties.new(
+						0,
+						v.CustomPhysicalProperties.Friction,
+						v.CustomPhysicalProperties.Elasticity,
+						v.CustomPhysicalProperties.FrictionWeight,
+						v.CustomPhysicalProperties.ElasticityWeight
+					)
+				end
+				getPProperties(v,t)
+			end			
+		end
+		
+		--Apply Seat Handler
+		for i,v in pairs(Seats) do
+			--Sit Handler
+			v.Seat.ChildAdded:connect(function(child)
+				if child.Name=="SeatWeld" and child:IsA("Weld") and child.Part1~=nil and child.Part1.Parent ~= workspace and not child.Part1.Parent:IsDescendantOf(car) then
+					v.Parts = {}
+					getPProperties(child.Part1.Parent,v.Parts)
+				end
+			end)
+			
+			--Leave Handler
+			v.Seat.ChildRemoved:connect(function(child)
+				if child.Name=="SeatWeld" and child:IsA("Weld") then
+					for i,v in pairs(v.Parts) do
+						if v[1]~=nil and v[2]~=nil and v[1]:IsDescendantOf(workspace) then
+							v[1].CustomPhysicalProperties = v[2]
+						end
+					end
+					v.Parts = {}
+				end
+			end)
+		end
+	
+	
+	
+	--[[Driver Handling]]
+	
+		--Driver Sit	
+		car.DriveSeat.ChildAdded:connect(function(child)
+			if child.Name=="SeatWeld" and child:IsA("Weld") and game.Players:GetPlayerFromCharacter(child.Part1.Parent)~=nil then
+				--Distribute Client Interface
+				local p=game.Players:GetPlayerFromCharacter(child.Part1.Parent)
+				car.DriveSeat:SetNetworkOwner(p)
+				local g=script.Parent["A-Chassis Interface"]:Clone()
+				g.Parent=p.PlayerGui
+			end
+		end)
+		
+		--Driver Leave
+		car.DriveSeat.ChildRemoved:connect(function(child)
+			if child.Name=="SeatWeld" and child:IsA("Weld") then
+				--Remove Flip Force
+				if car.DriveSeat:FindFirstChild("Flip")~=nil then
+					car.DriveSeat.Flip.MaxTorque = Vector3.new()
+				end
+				
+				--Remove Wheel Force
+				for i,v in pairs(car.Wheels:GetChildren()) do
+					if v:FindFirstChild("#AV")~=nil then
+						if v["#AV"]:IsA("BodyAngularVelocity") then
+							if v["#AV"].AngularVelocity.Magnitude>0 then
+								v["#AV"].AngularVelocity = Vector3.new()
+								v["#AV"].MaxTorque = Vector3.new()
+							end
+						else
+							if v["#AV"].AngularVelocity>0 then
+								v["#AV"].AngularVelocity = 0
+								v["#AV"].MotorMaxTorque = 0
+							end
+						end
+					end
+				end
+			end
+		end)
+		
+	--[END]]
+end
+coroutine.wrap(RCUIY_fake_script)()
+local function YSYZQ_fake_script() -- AChassisInterface.Drive 
+	local script = Instance.new('LocalScript', AChassisInterface)
+
+	--[[
+			___      _______                _     
+		   / _ |____/ ___/ /  ___ ____ ___ (_)__ 
+		  / __ /___/ /__/ _ \/ _ `(_-<(_-</ (_-<
+		 /_/ |_|   \___/_//_/\_,_/___/___/_/___/
+	 						SecondLogic @ Inspare
+	
+	
+	*I assume you know what you're doing if you're gonna change something here.* ]]--
+	
+	--[[START]]
+	
+		script.Parent:WaitForChild("Car")
+		script.Parent:WaitForChild("IsOn")
+		script.Parent:WaitForChild("ControlsOpen")
+		script.Parent:WaitForChild("Values")
+	
+	--[[Dependencies]]
+	
+		local player = game.Players.LocalPlayer
+		local mouse = player:GetMouse()
+		local UserInputService = game:GetService("UserInputService")
+		local car = script.Parent.Car.Value
+		local _Tune = require(car["A-Chassis Tune"])
+	
+	
+	
+	--[[Output Scaling Factor]]
+	
+		local hpScaling = _Tune.WeightScaling*10
+		local FBrakeForce = _Tune.FBrakeForce
+		local RBrakeForce = _Tune.RBrakeForce
+		local PBrakeForce = _Tune.PBrakeForce
+		if not workspace:PGSIsEnabled() then
+			hpScaling = _Tune.LegacyScaling*10
+			FBrakeForce = _Tune.FLgcyBForce
+			RBrakeForce = _Tune.RLgcyBForce
+			PBrakeForce = _Tune.LgcyPBForce
+		end
+	
+	--[[Status Vars]]
+	
+		local _IsOn = _Tune.AutoStart
+		if _Tune.AutoStart then script.Parent.IsOn.Value=true end
+		
+		local _GSteerT=0
+		local _GSteerC=0
+		local _GThrot=0
+		local _GBrake=0
+		
+		local _ClutchOn = true
+		local _ClPressing = false
+		local _RPM = 0
+		local _HP = 0
+		local _OutTorque = 0
+		local _CGear = 0
+		local _PGear = _CGear
+		local _spLimit = 0
+		
+		local _TMode = _Tune.TransModes[1]
+		
+		local _MSteer = false
+		local _SteerL = false
+		local _SteerR = false
+		local _PBrake = false
+		local _TCS = _Tune.TCSEnabled
+		local _TCSActive = false
+		local _ABS = _Tune.ABSEnabled
+		local _ABSActive = false
+		
+		local FlipWait=tick()
+		local FlipDB=false
+		
+		local _InControls = false
+	
+	
+	
+	--[[Shutdown]]
+	
+		car.DriveSeat.ChildRemoved:connect(function(child)
+			if child.Name=="SeatWeld" and child:IsA("Weld") then
+				script.Parent:Destroy()
+			end
+		end)
+	
+	
+	
+	--[[Controls]]
+	
+		local _CTRL = _Tune.Controls
+		local Controls = Instance.new("Folder",script.Parent)
+		Controls.Name = "Controls"
+		for i,v in pairs(_CTRL) do
+			local a=Instance.new("StringValue",Controls)
+			a.Name=i
+			a.Value=v.Name
+			a.Changed:connect(function()
+				if i=="MouseThrottle" or i=="MouseBrake" then
+					if a.Value == "MouseButton1" or a.Value == "MouseButton2" then
+						_CTRL[i]=Enum.UserInputType[a.Value]
+					else
+						_CTRL[i]=Enum.KeyCode[a.Value]
+					end
+				else
+					_CTRL[i]=Enum.KeyCode[a.Value]
+				end
+			end)
+		end
+		
+		--Deadzone Adjust
+		local _PPH = _Tune.Peripherals
+			for i,v in pairs(_PPH) do
+			local a = Instance.new("IntValue",Controls)
+			a.Name = i
+			a.Value = v
+			a.Changed:connect(function() 
+				a.Value=math.min(100,math.max(0,a.Value))
+				_PPH[i] = a.Value
+			end)
+		end
+		
+		--Input Handler
+		function DealWithInput(input,IsRobloxFunction)
+			if (UserInputService:GetFocusedTextBox()==nil) and not _InControls then --Ignore when UI Focus
+				--Shift Down [Manual Transmission]
+				if _IsOn and  (input.KeyCode ==_CTRL["ContlrShiftDown"] or (_MSteer and input.KeyCode==_CTRL["MouseShiftDown"]) or ((not _MSteer) and input.KeyCode==_CTRL["ShiftDown"])) and (_TMode=="Semi" or (_TMode=="Manual" and (not _ClutchOn))) and input.UserInputState == Enum.UserInputState.Begin then
+					if _CGear == 0 and (_TMode=="Auto" or not _ClPressing) then _ClutchOn = true end
+					_CGear = math.max(_CGear-1,-1)
+					
+				--Shift Up [Manual Transmission]
+				elseif _IsOn and  (input.KeyCode ==_CTRL["ContlrShiftUp"] or (_MSteer and input.KeyCode==_CTRL["MouseShiftUp"]) or ((not _MSteer) and input.KeyCode==_CTRL["ShiftUp"])) and (_TMode=="Semi" or (_TMode=="Manual" and (not _ClutchOn))) and input.UserInputState == Enum.UserInputState.Begin then
+					if _CGear == 0 and (_TMode=="Auto" or not _ClPressing) then _ClutchOn = true end
+					_CGear = math.min(_CGear+1,#_Tune.Ratios-2)
+					
+				--Toggle Clutch
+				elseif _IsOn and  (input.KeyCode ==_CTRL["ContlrClutch"] or (_MSteer and input.KeyCode==_CTRL["MouseClutch"]) or ((not _MSteer) and input.KeyCode==_CTRL["Clutch"])) and _TMode=="Manual" then
+					if input.UserInputState == Enum.UserInputState.Begin then
+						_ClutchOn = false
+						_ClPressing = true
+					elseif input.UserInputState == Enum.UserInputState.End then
+						_ClutchOn = true
+						_ClPressing = false
+					end
+					
+				--Toggle PBrake
+				elseif _IsOn and  input.KeyCode ==_CTRL["ContlrPBrake"] or (_MSteer and input.KeyCode==_CTRL["MousePBrake"]) or ((not _MSteer) and input.KeyCode==_CTRL["PBrake"]) then
+					if input.UserInputState == Enum.UserInputState.Begin then
+						_PBrake = not _PBrake
+					elseif input.UserInputState == Enum.UserInputState.End then
+						if car.DriveSeat.Velocity.Magnitude>5 then
+							_PBrake = false
+						end
+					end
+					
+				--Toggle Transmission Mode
+				elseif (input.KeyCode == _CTRL["ContlrToggleTMode"] or input.KeyCode==_CTRL["ToggleTransMode"]) and input.UserInputState == Enum.UserInputState.Begin then
+					local n=1
+					for i,v in pairs(_Tune.TransModes) do
+						if v==_TMode then n=i break end
+					end
+					n=n+1
+					if n>#_Tune.TransModes then n=1 end
+					_TMode = _Tune.TransModes[n]
+					
+				--Throttle
+				elseif _IsOn and ((not _MSteer) and (input.KeyCode==_CTRL["Throttle"] or input.KeyCode == _CTRL["Throttle2"])) or ((((_CTRL["MouseThrottle"]==Enum.UserInputType.MouseButton1 or _CTRL["MouseThrottle"]==Enum.UserInputType.MouseButton2) and input.UserInputType == _CTRL["MouseThrottle"]) or input.KeyCode == _CTRL["MouseThrottle"])and _MSteer) then
+					if input.UserInputState == Enum.UserInputState.Begin then
+						_GThrot = 1
+					else
+						_GThrot = _Tune.IdleThrottle/100
+					end
+					
+				--Brake
+				elseif ((not _MSteer) and (input.KeyCode==_CTRL["Brake"] or input.KeyCode == _CTRL["Brake2"])) or ((((_CTRL["MouseBrake"]==Enum.UserInputType.MouseButton1 or _CTRL["MouseBrake"]==Enum.UserInputType.MouseButton2) and input.UserInputType == _CTRL["MouseBrake"]) or input.KeyCode == _CTRL["MouseBrake"])and _MSteer) then
+					if input.UserInputState == Enum.UserInputState.Begin then
+						_GBrake = 1
+					else
+						_GBrake = 0
+					end
+					
+				--Steer Left
+				elseif (not _MSteer) and (input.KeyCode==_CTRL["SteerLeft"] or input.KeyCode == _CTRL["SteerLeft2"]) then
+					if input.UserInputState == Enum.UserInputState.Begin then
+						_GSteerT = -1
+						_SteerL = true
+					else
+						if _SteerR then
+							_GSteerT = 1
+						else
+							_GSteerT = 0
+						end
+						_SteerL = false
+					end
+					
+				--Steer Right
+				elseif (not _MSteer) and (input.KeyCode==_CTRL["SteerRight"] or input.KeyCode == _CTRL["SteerRight2"]) then
+					if input.UserInputState == Enum.UserInputState.Begin then
+						_GSteerT = 1
+						_SteerR = true
+					else
+						if _SteerL then
+							_GSteerT = -1
+						else
+							_GSteerT = 0
+						end
+						_SteerR = false
+					end
+					
+				--Toggle Mouse Controls
+				elseif input.KeyCode ==_CTRL["ToggleMouseDrive"] then
+					if input.UserInputState == Enum.UserInputState.End then
+						_MSteer = not _MSteer
+						_GThrot = _Tune.IdleThrottle/100
+						_GBrake = 0
+						_GSteerT = 0
+						_ClutchOn = true
+					end
+					
+				--Toggle TCS
+				elseif  _Tune.TCSEnabled and _IsOn and input.KeyCode == _CTRL["ToggleTCS"] or input.KeyCode == _CTRL["ContlrToggleTCS"] then
+					if input.UserInputState == Enum.UserInputState.End then
+						_TCS = not _TCS
+					end
+				
+				--Toggle ABS
+				elseif  _Tune. ABSEnabled and _IsOn and input.KeyCode == _CTRL["ToggleABS"] or input.KeyCode == _CTRL["ContlrToggleABS"] then
+					if input.UserInputState == Enum.UserInputState.End then
+						_ABS = not _ABS
+					end
+				end
+				
+				--Variable Controls
+				if input.UserInputType.Name:find("Gamepad") then
+					--Gamepad Steering
+					if input.KeyCode == _CTRL["ContlrSteer"] then
+						if input.Position.X>= 0 then
+							local cDZone = math.min(.99,_Tune.Peripherals.ControlRDZone/100)
+							if math.abs(input.Position.X)>cDZone then
+								_GSteerT = (input.Position.X-cDZone)/(1-cDZone)
+							else
+								_GSteerT = 0
+							end
+						else
+							local cDZone = math.min(.99,_Tune.Peripherals.ControlLDZone/100)
+							if math.abs(input.Position.X)>cDZone then
+								_GSteerT = (input.Position.X+cDZone)/(1-cDZone)
+							else
+								_GSteerT = 0
+							end
+						end
+						
+					--Gamepad Throttle
+					elseif _IsOn and input.KeyCode == _CTRL["ContlrThrottle"] then
+						_GThrot = math.max(_Tune.IdleThrottle/100,input.Position.Z)
+						
+					--Gamepad Brake
+					elseif input.KeyCode == _CTRL["ContlrBrake"] then
+						_GBrake = input.Position.Z
+					end
+				end
+			else
+				_GThrot = _Tune.IdleThrottle/100
+				_GSteerT = 0
+				_GBrake = 0
+				if _CGear~=0 then _ClutchOn = true end
+			end
+		end
+		UserInputService.InputBegan:connect(DealWithInput)
+		UserInputService.InputChanged:connect(DealWithInput)
+		UserInputService.InputEnded:connect(DealWithInput)
+	
+	
+	
+	--[[Drivetrain Initialize]]
+	
+		local Drive={}
+		
+		--Power Front Wheels
+		if _Tune.Config == "FWD" or _Tune.Config == "AWD" then
+			for i,v in pairs(car.Wheels:GetChildren()) do
+				if v.Name=="FL" or v.Name=="FR" or v.Name=="F" then
+					table.insert(Drive,v)
+				end
+			end
+		end
+		
+		--Power Rear Wheels
+		if _Tune.Config == "RWD" or _Tune.Config == "AWD" then
+			for i,v in pairs(car.Wheels:GetChildren()) do
+				if v.Name=="RL" or v.Name=="RR" or v.Name=="R" then
+					table.insert(Drive,v)
+				end
+			end
+		end
+		
+		--Determine Wheel Size
+		local wDia = 0
+		for i,v in pairs(Drive) do
+			if v.Size.x>wDia then wDia = v.Size.x end
+		end
+		
+		--Pre-Toggled PBrake
+		for i,v in pairs(car.Wheels:GetChildren()) do
+			if v["#AV"]:IsA("BodyAngularVelocity") then
+				if math.abs(v["#AV"].maxTorque.Magnitude-PBrakeForce)<1 then
+					_PBrake=true
+				end
+			else
+				if math.abs(v["#AV"].MotorMaxTorque-PBrakeForce)<1 then
+					_PBrake=true
+				end
+			end
+		end
+		
+		
+	
+	--[[Steering]]
+	
+		function Steering()
+			--Mouse Steer
+			if _MSteer then
+				local msWidth = math.max(1,mouse.ViewSizeX*_Tune.Peripherals.MSteerWidth/200)
+				local mdZone = _Tune.Peripherals.MSteerDZone/100
+				local mST = ((mouse.X-mouse.ViewSizeX/2)/msWidth)
+				if math.abs(mST)<=mdZone then
+					_GSteerT = 0
+				else
+					_GSteerT = (math.max(math.min((math.abs(mST)-mdZone),(1-mdZone)),0)/(1-mdZone))^_Tune.MSteerExp * (mST / math.abs(mST))
+				end
+			end
+			
+			--Interpolate Steering
+			if _GSteerC < _GSteerT then
+				if _GSteerC<0 then
+					_GSteerC = math.min(_GSteerT,_GSteerC+_Tune.ReturnSpeed)
+				else
+					_GSteerC = math.min(_GSteerT,_GSteerC+_Tune.SteerSpeed)
+				end
+			else
+				if _GSteerC>0 then
+					_GSteerC = math.max(_GSteerT,_GSteerC-_Tune.ReturnSpeed)
+				else
+					_GSteerC = math.max(_GSteerT,_GSteerC-_Tune.SteerSpeed)
+				end
+			end
+			
+			--Steer Decay Multiplier
+			local sDecay = (1-math.min(car.DriveSeat.Velocity.Magnitude/_Tune.SteerDecay,1-(_Tune.MinSteer/100)))
+			
+			--Apply Steering
+			for i,v in pairs(car.Wheels:GetChildren()) do
+				if v.Name=="F" then
+					v.Arm.Steer.CFrame=car.Wheels.F.Base.CFrame*CFrame.Angles(0,-math.rad(_GSteerC*_Tune.SteerInner*sDecay),0)
+				elseif v.Name=="FL" then
+					if _GSteerC>= 0 then
+						v.Arm.Steer.CFrame=car.Wheels.FL.Base.CFrame*CFrame.Angles(0,-math.rad(_GSteerC*_Tune.SteerOuter*sDecay),0)
+					else
+						v.Arm.Steer.CFrame=car.Wheels.FL.Base.CFrame*CFrame.Angles(0,-math.rad(_GSteerC*_Tune.SteerInner*sDecay),0)
+					end
+				elseif v.Name=="FR" then
+					if _GSteerC>= 0 then
+						v.Arm.Steer.CFrame=car.Wheels.FR.Base.CFrame*CFrame.Angles(0,-math.rad(_GSteerC*_Tune.SteerInner*sDecay),0)
+					else
+						v.Arm.Steer.CFrame=car.Wheels.FR.Base.CFrame*CFrame.Angles(0,-math.rad(_GSteerC*_Tune.SteerOuter*sDecay),0)
+					end
+				end
+			end
+		end
+	
+	
+	
+	--[[Engine]]
+	
+		local fFD = _Tune.FinalDrive*_Tune.FDMult
+		local fFDr = fFD*30/math.pi
+		local cGrav = workspace.Gravity*_Tune.InclineComp/32.2
+		local wDRatio = wDia*math.pi/60
+		local cfWRot = CFrame.Angles(math.pi/2,-math.pi/2,0)
+		local cfYRot = CFrame.Angles(0,math.pi,0)
+		local rtTwo = (2^.5)/2
+	
+		--Horsepower Curve
+		local fgc_h=_Tune.Horsepower/100
+		local fgc_n=_Tune.PeakRPM/1000
+		local fgc_a=_Tune.PeakSharpness
+		local fgc_c=_Tune.CurveMult
+		
+		function FGC(x)
+			x=x/1000
+			return (((-(x-fgc_n)^2)*math.min(fgc_h/(fgc_n^2),fgc_c^(fgc_n/fgc_h)))+fgc_h)*(x-((x^fgc_a)/((fgc_a*fgc_n)^(fgc_a-1))))
+		end
+		local PeakFGC = FGC(_Tune.PeakRPM)
+		
+		--Plot Current Horsepower
+		function GetCurve(x,gear)
+			local hp=math.max((FGC(x)*_Tune.Horsepower)/PeakFGC,0)
+			return hp,hp*(_Tune.EqPoint/x)*_Tune.Ratios[gear+2]*fFD*hpScaling
+		end
+		
+		--Output Cache
+		local CacheTorque = true
+		local HPCache = {}
+		local HPInc = 100
+		
+		if CacheTorque then
+			for gear,ratio in pairs(_Tune.Ratios) do
+				local hpPlot = {}
+				for rpm = math.floor(_Tune.IdleRPM/HPInc),math.ceil((_Tune.Redline+100)/HPInc) do
+					local tqPlot = {}
+					tqPlot.Horsepower,tqPlot.Torque = GetCurve(rpm*HPInc,gear-2)
+					hp1,tq1 = GetCurve((rpm+1)*HPInc,gear-2)
+					tqPlot.HpSlope = (hp1 - tqPlot.Horsepower)/(HPInc/1000)
+					tqPlot.TqSlope = (tq1 - tqPlot.Torque)/(HPInc/1000)
+					hpPlot[rpm] = tqPlot
+				end
+				table.insert(HPCache,hpPlot)
+			end
+		end
+		
+		--Powertrain
+		
+		--Update RPM
+		function RPM()
+			--Neutral Gear
+			if _CGear==0 then _ClutchOn = false end
+		
+			--Car Is Off
+			local revMin = _Tune.IdleRPM
+			if not _IsOn then 
+				revMin = 0 
+				_CGear = 0
+				_ClutchOn = false
+				_GThrot = _Tune.IdleThrottle/100
+			end
+			
+			--Determine RPM
+			local maxSpin=0
+			for i,v in pairs(Drive) do
+				if v.RotVelocity.Magnitude>maxSpin then maxSpin = v.RotVelocity.Magnitude end
+			end
+			if _ClutchOn then
+				local aRPM = math.max(math.min(maxSpin*_Tune.Ratios[_CGear+2]*fFDr,_Tune.Redline+100),revMin)
+				local clutchP = math.min(math.abs(aRPM-_RPM)/_Tune.ClutchTol,.9)
+				_RPM = _RPM*clutchP  +  aRPM*(1-clutchP)
+			else
+				if _GThrot-(_Tune.IdleThrottle/100)>0 then
+					if _RPM>_Tune.Redline then
+						_RPM = _RPM-_Tune.RevBounce*2
+					else
+						_RPM = math.min(_RPM+_Tune.RevAccel*_GThrot,_Tune.Redline+100)
+					end
+				else
+					_RPM = math.max(_RPM-_Tune.RevDecay,revMin)
+				end
+			end
+			
+			--Rev Limiter
+			_spLimit = (_Tune.Redline+100)/(fFDr*_Tune.Ratios[_CGear+2])
+			if _RPM>_Tune.Redline then 
+				if _CGear<#_Tune.Ratios-2 then
+					_RPM = _RPM-_Tune.RevBounce
+				else
+					_RPM = _RPM-_Tune.RevBounce*.5
+				end
+			end
+		end
+		
+		--Apply Power
+		function Engine()
+			--Get Torque
+			local maxSpin=0
+			for i,v in pairs(Drive) do
+				if v.RotVelocity.Magnitude>maxSpin then maxSpin = v.RotVelocity.Magnitude end
+			end
+			if _ClutchOn then
+				if CacheTorque then
+					local cTq = HPCache[_CGear+2][math.floor(math.min(_Tune.Redline,math.max(_Tune.IdleRPM,_RPM))/HPInc)]
+					_HP = cTq.Horsepower+(cTq.HpSlope*(_RPM-math.floor(_RPM/HPInc))/1000)
+					_OutTorque = cTq.Torque+(cTq.TqSlope*(_RPM-math.floor(_RPM/HPInc))/1000)
+				else
+					_HP,_OutTorque = GetCurve(_RPM,_CGear)
+					
+				end
+				local iComp =(car.DriveSeat.CFrame.lookVector.y)*cGrav
+				if _CGear==-1 then iComp=-iComp end
+				_OutTorque = _OutTorque*math.max(1,(1+iComp))
+			else
+				_HP,_OutTorque = 0,0
+			end
+			
+			--Automatic Transmission
+			if _TMode == "Auto" and _IsOn then
+				_ClutchOn = true
+				if _CGear == 0 then _CGear = 1 end
+				if _CGear >= 1 then
+					if _CGear==1 and _GBrake > 0  and car.DriveSeat.Velocity.Magnitude < 20 then
+						_CGear = -1
+					else
+						if _Tune.AutoShiftMode == "RPM" then
+							if _RPM>(_Tune.PeakRPM+_Tune.AutoUpThresh) then
+								_CGear=math.min(_CGear+1,#_Tune.Ratios-2) 
+							elseif math.max(math.min(maxSpin*_Tune.Ratios[_CGear+1]*fFDr,_Tune.Redline+100),_Tune.IdleRPM)<(_Tune.PeakRPM-_Tune.AutoDownThresh) then
+								_CGear=math.max(_CGear-1,1)
+							end
+						else
+							if car.DriveSeat.Velocity.Magnitude > math.ceil(wDRatio*(_Tune.PeakRPM+_Tune.AutoUpThresh)/_Tune.Ratios[_CGear+2]/fFD) then
+								_CGear=math.min(_CGear+1,#_Tune.Ratios-2)
+							elseif car.DriveSeat.Velocity.Magnitude < math.ceil(wDRatio*(_Tune.PeakRPM-_Tune.AutoDownThresh)/_Tune.Ratios[_CGear+1]/fFD) then
+								_CGear=math.max(_CGear-1,1)
+							end
+						end
+					end
+				else
+					if _GThrot-(_Tune.IdleThrottle/100) > 0 and car.DriveSeat.Velocity.Magnitude < 20 then
+						_CGear = 1
+					end
+				end
+			end 
+			
+			--Average Rotational Speed Calculation
+			local fwspeed=0
+			local fwcount=0
+			local rwspeed=0
+			local rwcount=0
+			
+			for i,v in pairs(car.Wheels:GetChildren()) do
+				if v.Name=="FL" or v.Name=="FR" or v.Name == "F" then
+					fwspeed=fwspeed+v.RotVelocity.Magnitude
+					fwcount=fwcount+1
+				elseif v.Name=="RL" or v.Name=="RR" or v.Name == "R" then
+					rwspeed=rwspeed+v.RotVelocity.Magnitude
+					rwcount=rwcount+1
+				end
+			end
+			fwspeed=fwspeed/fwcount
+			rwspeed=rwspeed/rwcount	
+			local cwspeed=(fwspeed+rwspeed)/2
+			
+			--Update Wheels
+			for i,v in pairs(car.Wheels:GetChildren()) do
+				--Reference Wheel Orientation
+				local Ref=(CFrame.new(v.Position-((v.Arm.CFrame*cfWRot).lookVector),v.Position)*cfYRot).lookVector
+				local aRef=1
+				local diffMult=1
+				if v.Name=="FL" or v.Name=="RL" then aRef=-1 end
+				
+				--AWD Torque Scaling
+				if _Tune.Config == "AWD" then _OutTorque = _OutTorque*rtTwo end
+				
+				--Differential/Torque-Vectoring
+				if v.Name=="FL" or v.Name=="FR" then
+					diffMult=math.max(0,math.min(1,1+((((v.RotVelocity.Magnitude-fwspeed)/fwspeed)/(math.max(_Tune.FDiffSlipThres,1)/100))*((_Tune.FDiffLockThres-50)/50))))
+					if _Tune.Config == "AWD" then
+						diffMult=math.max(0,math.min(1,diffMult*(1+((((fwspeed-cwspeed)/cwspeed)/(math.max(_Tune.CDiffSlipThres,1)/100))*((_Tune.CDiffLockThres-50)/50)))))
+					end
+				elseif v.Name=="RL" or v.Name=="RR" then
+					diffMult=math.max(0,math.min(1,1+((((v.RotVelocity.Magnitude-rwspeed)/rwspeed)/(math.max(_Tune.RDiffSlipThres,1)/100))*((_Tune.RDiffLockThres-50)/50))))
+					if _Tune.Config == "AWD" then
+						diffMult=math.max(0,math.min(1,diffMult*(1+((((rwspeed-cwspeed)/cwspeed)/(math.max(_Tune.CDiffSlipThres,1)/100))*((_Tune.CDiffLockThres-50)/50)))))
+					end
+				end
+				
+				_TCSActive = false
+				_ABSActive = false
+				--Output
+				if _PBrake and ((_Tune.Config ~= "FWD" and (((v.Name=="FL" or v.Name=="FR") and car.DriveSeat.Velocity.Magnitude<20) or ((v.Name=="RR" or v.Name=="RL") and car.DriveSeat.Velocity.Magnitude>=20))) or (_Tune.Config == "FWD" and (v.Name=="RR" or v.Name=="RL"))) then
+					--PBrake
+					v["#AV"].maxTorque=Vector3.new(math.abs(Ref.x),math.abs(Ref.y),math.abs(Ref.z))*PBrakeForce
+					v["#AV"].angularvelocity=Vector3.new()
+				else
+					--Apply Power
+					if ((_TMode == "Manual" or _TMode == "Semi") and _GBrake==0) or (_TMode == "Auto" and ((_CGear>-1 and _GBrake==0 ) or (_CGear==-1 and _GThrot-(_Tune.IdleThrottle/100)==0 )))then
+						local driven = false
+						for _,a in pairs(Drive) do if a==v then driven = true end end
+						if driven then
+							local on=1
+							if not script.Parent.IsOn.Value then on=0 end
+							local throt = _GThrot
+							if _TMode == "Auto" and _CGear==-1 then throt = _GBrake end
+							
+							--Apply TCS
+							local tqTCS = 1
+							if _TCS then
+								tqTCS = 1-(math.min(math.max(0,math.abs(v.RotVelocity.Magnitude*(v.Size.x/2) - v.Velocity.Magnitude)-_Tune.TCSThreshold)/_Tune.TCSGradient,1)*(1-(_Tune.TCSLimit/100)))
+							end
+							if tqTCS < 1 then
+								_TCSActive = true
+							end
+							
+							--Update Forces
+							local dir = 1
+							if _CGear==-1 then dir = -1 end
+							v["#AV"].maxTorque=Vector3.new(math.abs(Ref.x),math.abs(Ref.y),math.abs(Ref.z))*_OutTorque*(1+(v.RotVelocity.Magnitude/60)^1.15)*throt*tqTCS*diffMult*on
+							v["#AV"].angularvelocity=Ref*aRef*_spLimit*dir
+						else
+							v["#AV"].maxTorque=Vector3.new()
+							v["#AV"].angularvelocity=Vector3.new()
+						end
+						
+					--Brakes
+					else
+						local brake = _GBrake
+						if _TMode == "Auto" and _CGear==-1 then brake = _GThrot end
+						
+						--Apply ABS
+						local tqABS = 1
+						if _ABS and math.abs(v.RotVelocity.Magnitude*(v.Size.x/2) - v.Velocity.Magnitude)-_Tune.ABSThreshold>0 then
+							tqABS = 0
+						end
+						if tqABS < 1 then
+							_ABSActive = true
+						end
+						
+						--Update Forces
+						if v.Name=="FL" or v.Name=="FR" or v.Name=="F" then
+							v["#AV"].maxTorque=Vector3.new(math.abs(Ref.x),math.abs(Ref.y),math.abs(Ref.z))*FBrakeForce*brake*tqABS
+						else
+							v["#AV"].maxTorque=Vector3.new(math.abs(Ref.x),math.abs(Ref.y),math.abs(Ref.z))*RBrakeForce*brake*tqABS
+						end
+						v["#AV"].angularvelocity=Vector3.new()
+					end
+				end
+			end
+		end
+	
+	
+	
+	--[[Flip]]
+	
+		function Flip()
+			--Detect Orientation
+			if (car.DriveSeat.CFrame*CFrame.Angles(math.pi/2,0,0)).lookVector.y > .1 or FlipDB then
+				FlipWait=tick()
+				
+			--Apply Flip
+			else
+				if tick()-FlipWait>=3 then
+					FlipDB=true
+					local gyro = car.DriveSeat.Flip
+					gyro.maxTorque = Vector3.new(10000,0,10000)
+					gyro.P=3000
+					gyro.D=500
+					wait(1)
+					gyro.maxTorque = Vector3.new(0,0,0)
+					gyro.P=0
+					gyro.D=0
+					FlipDB=false
+				end
+			end
+		end
+	
+	
+	
+	--[[Run]]
+	
+		--Print Version
+		local ver=require(car["A-Chassis Tune"].README)
+		print("//INSPARE: AC6 Loaded - Build "..ver)
+		
+		--Runtime Loops
+		
+		-- ~60 c/s
+		game["Run Service"].Stepped:connect(function()
+			--Steering
+			Steering()
+			
+			--RPM
+			RPM()
+			
+			--Update External Values
+			_IsOn = script.Parent.IsOn.Value
+			_InControls = script.Parent.ControlsOpen.Value
+			script.Parent.Values.Gear.Value = _CGear
+			script.Parent.Values.RPM.Value = _RPM
+			script.Parent.Values.Horsepower.Value = _HP
+			script.Parent.Values.Torque.Value = _HP * _Tune.EqPoint / _RPM
+			script.Parent.Values.TransmissionMode.Value = _TMode
+			script.Parent.Values.Throttle.Value = _GThrot
+			script.Parent.Values.Brake.Value = _GBrake
+			script.Parent.Values.SteerC.Value = _GSteerC*(1-math.min(car.DriveSeat.Velocity.Magnitude/_Tune.SteerDecay,1-(_Tune.MinSteer/100)))
+			script.Parent.Values.SteerT.Value = _GSteerT
+			script.Parent.Values.PBrake.Value = _PBrake
+			script.Parent.Values.TCS.Value = _TCS
+			script.Parent.Values.TCSActive.Value = _TCSActive
+			script.Parent.Values.ABS.Value = _ABS
+			script.Parent.Values.ABSActive.Value = _ABSActive
+			script.Parent.Values.MouseSteerOn.Value = _MSteer
+			script.Parent.Values.Velocity.Value = car.DriveSeat.Velocity
+		end)
+		
+		-- ~15 c/s
+		while wait(.0667) do
+			--Power
+			Engine()
+			
+			--Flip
+			if _Tune.AutoFlip then Flip() end
+		end
+	
+	--[[END]]
+end
+coroutine.wrap(YSYZQ_fake_script)()
+local function XDDPPCQ_fake_script() -- main.Drag 
+	local script = Instance.new('LocalScript', main)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(XDDPPCQ_fake_script)()
+local function QFZQCQ_fake_script() -- R6.LocalScript 
+	local script = Instance.new('LocalScript', R6)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	script.RemoteEvent:FireServer()
+	end)
+end
+coroutine.wrap(QFZQCQ_fake_script)()
+local function CKXB_fake_script() -- nil.Script 
+	local script = Instance.new('Script', nil)
+
+	script.Parent.RemoteEvent.OnServerEvent:Connect(function(player)
+	require(script.Parent.Parent.R6).load(player.Name)
+	end)
+end
+coroutine.wrap(CKXB_fake_script)()
+local function ZUZY_fake_script() -- Exe.LocalScript 
+	local script = Instance.new('LocalScript', Exe)
+
+	-- Fires RemoteEvent once button is pressed
+	
+	local RS = script.Parent.RemoteEvent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		RS:FireServer(script.Parent.Parent.Frame1.TextBox.Text) -- Fires the Text in the TextBox
+	end)
+end
+coroutine.wrap(ZUZY_fake_script)()
+local function FLBLUZR_fake_script() -- Exe.Script 
+	local script = Instance.new('Script', Exe)
+
+	-- Pick up FireEvent once button is pressed
+	
+	local sss = script.Parent.RemoteEvent
+	
+	sss.OnServerEvent:Connect(function(skid, lol)
+		require(script.Loadstring)(lol)()
+	end)
+end
+coroutine.wrap(FLBLUZR_fake_script)()
+local function HBEHFKL_fake_script() -- Cle.LocalScript 
+	local script = Instance.new('LocalScript', Cle)
+
+	local box = script.Parent.Parent.Frame1.TextBox
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = "-- Script Cleared!"
+		wait(.6)
+		box.Text = ""
+	end)
+end
+coroutine.wrap(HBEHFKL_fake_script)()
